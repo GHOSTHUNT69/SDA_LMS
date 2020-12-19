@@ -116,6 +116,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\src</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -139,11 +140,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AcademicOfficer.h" />
+    <ClInclude Include="Attendance.h" />
+    <ClInclude Include="Course.h" />
+    <ClInclude Include="Evaluation.h" />
+    <ClInclude Include="EvaluationResult.h" />
+    <ClInclude Include="Faculty.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Registration.h" />
+    <ClInclude Include="Section.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AcademicOfficer.cpp" />
+    <ClCompile Include="Attendance.cpp" />
+    <ClCompile Include="Course.cpp" />
+    <ClCompile Include="Evaluation.cpp" />
+    <ClCompile Include="EvaluationResult.cpp" />
+    <ClCompile Include="Faculty.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Registration.cpp" />
+    <ClCompile Include="Section.cpp" />
     <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
