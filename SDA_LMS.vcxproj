@@ -150,6 +150,7 @@
     <ClInclude Include="Person.h" />
     <ClInclude Include="Registration.h" />
     <ClInclude Include="Section.h" />
+    <ClInclude Include="Session.h" />
     <ClInclude Include="Student.h" />
   </ItemGroup>
   <ItemGroup>
@@ -163,6 +164,7 @@
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Registration.cpp" />
     <ClCompile Include="Section.cpp" />
+    <ClCompile Include="Session.cpp" />
     <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

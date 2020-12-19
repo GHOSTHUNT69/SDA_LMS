@@ -3,6 +3,8 @@
 #include<vector>
 #include"Section.h"
 
+class Section;
+
 using std::string;
 using std::vector;
 
