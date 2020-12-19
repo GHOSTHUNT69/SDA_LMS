@@ -146,6 +146,7 @@
     <ClInclude Include="Evaluation.h" />
     <ClInclude Include="EvaluationResult.h" />
     <ClInclude Include="Faculty.h" />
+    <ClInclude Include="LMSDB.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Registration.h" />
     <ClInclude Include="Section.h" />
@@ -158,6 +159,7 @@
     <ClCompile Include="Evaluation.cpp" />
     <ClCompile Include="EvaluationResult.cpp" />
     <ClCompile Include="Faculty.cpp" />
+    <ClCompile Include="LMSDB.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="Registration.cpp" />
     <ClCompile Include="Section.cpp" />

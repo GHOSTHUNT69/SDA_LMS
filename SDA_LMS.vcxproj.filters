@@ -45,6 +45,9 @@
     <ClInclude Include="AcademicOfficer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="LMSDB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Person.cpp">
@@ -75,6 +78,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="AcademicOfficer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LMSDB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
