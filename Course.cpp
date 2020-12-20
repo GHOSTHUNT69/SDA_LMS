@@ -1,29 +1,32 @@
 #include "Course.h"
 
-Course::Course()
-{
-}
+namespace LMS {
 
-Course::Course(string cname_, string ccode_)
-	:cname(cname_),ccode(ccode_)
-{
-}
+	Course::Course()
+	{
+	}
 
-Course::~Course()
-{
-}
+	Course::Course(string cname_, string ccode_)
+		:cname(cname_), ccode(ccode_)
+	{
+	}
 
-string Course::get_cname()
-{
-	return cname;
-}
+	Course::~Course()
+	{
+	}
 
-string Course::get_ccode()
-{
-	return ccode;
-}
+	string Course::get_cname()
+	{
+		return cname;
+	}
 
-vector<Section*> Course::get_csections()
-{
-	return csections;
+	string Course::get_ccode()
+	{
+		return ccode;
+	}
+
+	vector<Section*> Course::get_csections()
+	{
+		return csections;
+	}
 }

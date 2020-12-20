@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Forward Declarations">
+      <UniqueIdentifier>{4b63ceba-8ceb-4a18-9543-52b1e247ffc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{4961e81d-8afb-49e9-b73c-70b844e9a2aa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Person.h">
@@ -54,6 +60,42 @@
     <ClInclude Include="LMS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Session_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="Section_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="Registration_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="EvaluationResult_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="Evaluation_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="Course_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="Faculty_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="Attendance_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="AcademicOfficer_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="Student_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="LMSDB_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
+    <ClInclude Include="Person_fwd.h">
+      <Filter>Forward Declarations</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Person.cpp">
@@ -93,7 +135,7 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Driver Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

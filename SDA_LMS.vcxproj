@@ -141,18 +141,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AcademicOfficer.h" />
+    <ClInclude Include="AcademicOfficer_fwd.h" />
     <ClInclude Include="Attendance.h" />
+    <ClInclude Include="Attendance_fwd.h" />
     <ClInclude Include="Course.h" />
+    <ClInclude Include="Course_fwd.h" />
     <ClInclude Include="Evaluation.h" />
     <ClInclude Include="EvaluationResult.h" />
+    <ClInclude Include="EvaluationResult_fwd.h" />
+    <ClInclude Include="Evaluation_fwd.h" />
     <ClInclude Include="Faculty.h" />
+    <ClInclude Include="Faculty_fwd.h" />
     <ClInclude Include="LMS.h" />
     <ClInclude Include="LMSDB.h" />
+    <ClInclude Include="LMSDB_fwd.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Person_fwd.h" />
     <ClInclude Include="Registration.h" />
+    <ClInclude Include="Registration_fwd.h" />
     <ClInclude Include="Section.h" />
+    <ClInclude Include="Section_fwd.h" />
     <ClInclude Include="Session.h" />
+    <ClInclude Include="Session_fwd.h" />
     <ClInclude Include="Student.h" />
+    <ClInclude Include="Student_fwd.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AcademicOfficer.cpp" />

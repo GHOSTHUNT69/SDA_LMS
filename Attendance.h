@@ -1,9 +1,8 @@
 #pragma once
-#include"LMS.h"
+#include"Registration_fwd.h"
 
-class Registration;
-
-class Attendance
-{
-};
-
+namespace LMS {
+	class Attendance
+	{
+	};
+}

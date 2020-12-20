@@ -1,9 +1,12 @@
 #include "Evaluation.h"
 
-Evaluation::Evaluation()
-{
-}
+namespace LMS {
 
-Evaluation::~Evaluation()
-{
+	Evaluation::Evaluation()
+	{
+	}
+
+	Evaluation::~Evaluation()
+	{
+	}
 }

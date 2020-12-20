@@ -1,7 +1,5 @@
 #pragma once
-#include"LMS.h"
-
-class Evaluation;
+#include"Evaluation_fwd.h"
 
 class EvaluationResult
 {
