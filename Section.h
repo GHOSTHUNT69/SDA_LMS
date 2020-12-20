@@ -16,10 +16,11 @@ protected:
 	Session* ssession;
 	Faculty* steacher;
 	Course* scourse;
+	string sectionname;
 	//waiting list
 public:
 	Section();
-	Section(vector<Registration*> sregistrations_, vector<Evaluation*> sevaluations_, Session* ssession_, Faculty* steacher_, Course* scourse_);
+	Section(vector<Registration*> sregistrations_, vector<Evaluation*> sevaluations_, Session* ssession_, Faculty* steacher_, Course* scourse_, string sectionname_);
 	~Section();
 };
 
