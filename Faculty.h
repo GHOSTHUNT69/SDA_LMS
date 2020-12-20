@@ -1,12 +1,14 @@
 #pragma once
-#include "Person.h"
-#include "Section.h"
+#include"Headers.h"
+
+class Person;
+class Section;
 
 class Faculty :
 	protected Person
 {
 protected:
-	vector<Section> fsections;
+	vector<Section*> fsections;
 public:
 	//Constructor
 	//Destructor

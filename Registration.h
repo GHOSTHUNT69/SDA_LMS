@@ -1,11 +1,12 @@
 #pragma once
+#include"Headers.h"
 #include<vector>
-#include"EvaluationResult.h"
-#include"Attendance.h"
 using std::vector;
 
 class Student;
 class Section;
+class Attendance;
+class EvaluationResult;
 
 class Registration
 {

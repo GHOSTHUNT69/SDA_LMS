@@ -1,6 +1,8 @@
 #pragma once
-#include "Person.h"
-#include "Registration.h"
+#include"Headers.h"
+
+class Person;
+class Registration;
 
 class Student :
     protected Person

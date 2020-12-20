@@ -1,12 +1,17 @@
 #pragma once
-#include "EvaluationResult.h"
+#include "Headers.h"
+#include<vector>
+using std::vector;
 
-class Section;
+class EvaluationResult;
 
-class Evaluation :
+class Evaluation
 {
 protected:
-	vector<Evaluation*> evaluationR;//evaluation results
+	vector<EvaluationResult*> evaluationR;//evaluation results
+public:
+	Evaluation();
+	~Evaluation();
 
 };
 

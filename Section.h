@@ -1,20 +1,21 @@
 #pragma once
-#include "Course.h"
-#include "Registration.h"
-#include "Evaluation.h"
-#include "Session.h"
-#include "Faculty.h"
+#include"Headers.h"
+
+class Registration;
+class Evaluation;
+class Faculty;
+class Session;
+class Course;
 
 
-class Section :
-	protected Course
+class Section
 {
 protected:
-	vector<Registration> sregistrations;
-	vector<Evaluation> sevaluations;
-	Session ssession;
-	Faculty steacher;
-	Course scourse;
+	vector<Registration*> sregistrations;
+	vector<Evaluation*> sevaluations;
+	Session* ssession;
+	Faculty* steacher;
+	Course* scourse;
 	//waiting list
 public:
 };

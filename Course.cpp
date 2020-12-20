@@ -23,7 +23,7 @@ string Course::get_ccode()
 	return ccode;
 }
 
-vector<Section> Course::get_csections()
+vector<Section*> Course::get_csections()
 {
 	return csections;
 }

@@ -1,5 +1,8 @@
 #pragma once
-#include "Person.h"
+#include"Headers.h"
+
+class Person;
+
 class AcademicOfficer :
     protected Person
 {
