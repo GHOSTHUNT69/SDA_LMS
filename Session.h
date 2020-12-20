@@ -1,5 +1,5 @@
 #pragma once
-#include"Headers.h"
+#include"LMS.h"
 
 class Section;
 
@@ -12,5 +12,8 @@ protected:
 	//sections vector
 public:
 	//registration close or open function
+	Session();
+	Session(string sessionD_, vector<Section*> sesection_, bool regOpen_);
+	~Session();
 };
 

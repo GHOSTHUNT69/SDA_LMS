@@ -1,5 +1,5 @@
 #pragma once
-#include"Headers.h"
+#include"LMS.h"
 
 class Registration;
 class Evaluation;
@@ -18,5 +18,8 @@ protected:
 	Course* scourse;
 	//waiting list
 public:
+	Section();
+	Section(vector<Registration*> sregistrations_, vector<Evaluation*> sevaluations_, Session* ssession_, Faculty* steacher_, Course* scourse_);
+	~Section();
 };
 

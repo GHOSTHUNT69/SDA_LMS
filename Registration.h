@@ -1,5 +1,5 @@
 #pragma once
-#include"Headers.h"
+#include"LMS.h"
 #include<vector>
 using std::vector;
 
@@ -16,5 +16,8 @@ protected:
 	vector<EvaluationResult*> seresults;//student evaluation results
 	vector<Attendance*> sattendance;//student attendance
 public:
+	Registration();
+	Registration(Student* student_, Section* ssection_, vector<EvaluationResult*> seresults_, vector<Attendance*> sattendance_);
+	~Registration();
 };
 
