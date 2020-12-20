@@ -51,7 +51,7 @@
     <ClInclude Include="Session.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Headers.h">
+    <ClInclude Include="LMS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

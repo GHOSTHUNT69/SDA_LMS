@@ -1,13 +1,15 @@
 #pragma once
-#include"Headers.h"
+#include"LMS.h"
 #include<string>
 #include<vector>
 using std::string;
 using std::vector;
 
+//classes used
 class Person;
 class Section;
 
+//teacher
 class Faculty :
 	protected Person
 {

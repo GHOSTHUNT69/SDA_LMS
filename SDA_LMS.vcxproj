@@ -146,7 +146,7 @@
     <ClInclude Include="Evaluation.h" />
     <ClInclude Include="EvaluationResult.h" />
     <ClInclude Include="Faculty.h" />
-    <ClInclude Include="Headers.h" />
+    <ClInclude Include="LMS.h" />
     <ClInclude Include="LMSDB.h" />
     <ClInclude Include="Person.h" />
     <ClInclude Include="Registration.h" />
