@@ -1,7 +1,8 @@
 #pragma once
-#include "Registration.h"
-class Attendance :
-    protected Registration
+
+class Registration;
+
+class Attendance
 {
 };
 

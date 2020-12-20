@@ -1,8 +1,12 @@
 #pragma once
-#include "Section.h"
+#include "EvaluationResult.h"
+
+class Section;
 
 class Evaluation :
-	protected Section
 {
+protected:
+	vector<Evaluation*> evaluationR;//evaluation results
+
 };
 

@@ -1,12 +1,10 @@
 #pragma once
 #include "Course.h"
-//#include "Registration.h"
-//#include "Evaluation.h"
+#include "Registration.h"
+#include "Evaluation.h"
 #include "Session.h"
 #include "Faculty.h"
 
-class Evaluation;
-class Registration;
 
 class Section :
 	protected Course
