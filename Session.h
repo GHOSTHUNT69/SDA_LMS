@@ -16,7 +16,12 @@ namespace LMS {
 	public:
 		//registration close or open function
 		Session();
-		Session(string sessionD_, vector<Section*> sesection_, bool regOpen_);
+		Session(string _sessionD, vector<Section*> _sesection, bool _regOpen=true);
 		~Session();
+
+		bool addSection(Section*_sec);
+		void closeReg();
+		bool isRegOpen();
+
 	};
 }

@@ -6,13 +6,24 @@ namespace LMS {
 	{
 	}
 
-	Course::Course(string cname_, string ccode_)
-		:cname(cname_), ccode(ccode_)
+	Course::Course(string _name, string _code)
+		:cname(_name), ccode(_code)
+	{
+	}
+
+	Course::Course(string _name, string _code, vector<Section*> _secs)
+		:cname(_name),ccode(_code),csections(_secs)
 	{
 	}
 
 	Course::~Course()
 	{
+	}
+
+	bool Course::addSection(Section* _sec)
+	{
+		csections.push_back(_sec);
+		return true;
 	}
 
 	string Course::get_cname()

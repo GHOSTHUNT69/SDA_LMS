@@ -8,15 +8,21 @@ namespace LMS {
 	}
 
 	Section::Section(string _name, Course* _course, Faculty* _teacher, Session* _session)
+		:sname(_name),scourse(_course),steacher(_teacher),ssession(_session)
 	{
 	}
 
-	Section::Section(vector<Registration*> sregistrations_, vector<Evaluation*> sevaluations_, Session* ssession_, Faculty* steacher_, Course* scourse_, string sectionname_)
-		:sregistrations(sregistrations_), sevaluations(sevaluations_), ssession(ssession_), steacher(steacher_), scourse(scourse_), sname(sectionname_)
+	Section::Section(string _name, Course* _course, Faculty* _teacher, Session* _session, vector<Registration*> _regs, vector<Evaluation*> _evals)
+		:sregistrations(_regs), sevaluations(_evals), ssession(_session), steacher(_teacher), scourse(_course), sname(_name)
 	{
 	}
 
 	Section::~Section()
 	{
+	}
+	bool Section::addRegistration(Registration*_reg)
+	{
+		sregistrations.push_back(_reg);
+		return true;
 	}
 }

@@ -23,7 +23,9 @@ namespace LMS {
 	public:
 		Section();
 		Section(string _name, Course* _course = nullptr, Faculty* _teacher = nullptr, Session* _session = nullptr);
-		Section(vector<Registration*> sregistrations_, vector<Evaluation*> sevaluations_, Session* ssession_, Faculty* steacher_, Course* scourse_, string sectionname_);
+		Section(string _name, Course* _course, Faculty* _teacher, Session* _session, vector<Registration*> _regs, vector<Evaluation*>_evals);
 		~Section();
+
+		bool addRegistration(Registration*);
 	};
 }

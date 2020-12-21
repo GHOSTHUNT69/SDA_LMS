@@ -5,6 +5,7 @@
 #include"Session_fwd.h"
 #include"Course_fwd.h"
 #include"Student_fwd.h"
+#include"Registration.h"
 #include<vector>
 #include<string>
 using std::string;
@@ -23,21 +24,18 @@ namespace LMS {
         AcademicOfficer();
         ~AcademicOfficer();
 
-        ////course
-        //bool addCourse(Course*);
-        //bool addCourse(string, string);
+        //course
+        bool addCourse(Course*);
 
-        ////student
-        //bool addStudent(Student*);
-        //bool addStudent();
+        //student
+        bool addStudent(Student*);
+        bool registerStudent(Student*, Section*);
 
-        ////teacher
-        //bool addTeacher(Faculty*);
-        //bool addTeacher();
+        //teacher
+        bool addTeacher(Faculty*);
 
-        ////session
-        //bool addSession(Session*);
-        //bool addSession();
+        //session
+        bool addSession(Session*);
 
     };
 }

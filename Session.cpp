@@ -2,6 +2,7 @@
 
 namespace LMS {
     Session::Session()
+        :regOpen(true)
     {
     }
 
@@ -12,5 +13,21 @@ namespace LMS {
 
     Session::~Session()
     {
+    }
+
+    bool Session::addSection(Section* _sec)
+    {
+        sesection.push_back(_sec);
+        return true;
+    }
+
+    void Session::closeReg()
+    {
+        regOpen = false;
+    }
+    
+    bool Session::isRegOpen()
+    {
+        return regOpen;
     }
 }

@@ -14,8 +14,11 @@ namespace LMS {
 		vector<Section*> csections;
 	public:
 		Course();
-		Course(string, string);
+		Course(string _name, string _code);
+		Course(string _name, string _code,vector<Section*>_secs);
 		~Course();
+
+		bool addSection(Section* _sec);
 
 		string get_cname();
 		string get_ccode();
