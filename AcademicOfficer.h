@@ -1,10 +1,10 @@
 #pragma once
-#include"Person_fwd.h"
+#include"Person.h"
 #include"Section_fwd.h"
-#include"Faculty.h"
-#include"Session.h"
-#include"Course.h"
-#include"Student.h"
+#include"Faculty_fwd.h"
+#include"Session_fwd.h"
+#include"Course_fwd.h"
+#include"Student_fwd.h"
 #include<vector>
 #include<string>
 using std::string;
