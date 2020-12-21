@@ -1,3 +1,5 @@
 #pragma once
 
-class Session;
+namespace LMS {
+	class Session;
+}

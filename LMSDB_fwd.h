@@ -1,3 +1,5 @@
 #pragma once
 
-class LMSDB;
+namespace LMS {
+	class LMSDB;
+}

@@ -1,4 +1,5 @@
 #include "Student.h"
+#include "Registration.h"
 
 namespace LMS {
 	Student::Student()
@@ -17,5 +18,15 @@ namespace LMS {
 
 	Student::~Student()
 	{
+	}
+	bool Student::addRegistration(Registration* reg_)
+	{
+		sregistrations.push_back(reg_);
+		return true;
+	}
+	bool Student::addRegistration(Section* sec_)
+	{
+		sregistrations.push_back(new Registration(this,sec_));
+		return true;
 	}
 }

@@ -1,3 +1,5 @@
 #pragma once
 
-class Course;
+namespace LMS {
+	class Course;
+}

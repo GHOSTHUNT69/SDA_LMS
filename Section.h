@@ -18,10 +18,11 @@ namespace LMS {
 		Session* ssession;
 		Faculty* steacher;
 		Course* scourse;
-		string sectionname;
+		string sname;
 		//waiting list
 	public:
 		Section();
+		Section(string _name, Course* _course = nullptr, Faculty* _teacher = nullptr, Session* _session = nullptr);
 		Section(vector<Registration*> sregistrations_, vector<Evaluation*> sevaluations_, Session* ssession_, Faculty* steacher_, Course* scourse_, string sectionname_);
 		~Section();
 	};

@@ -1,3 +1,5 @@
 #pragma once
 
-class EvaluationResult;
+namespace LMS {
+	class EvaluationResult;
+}

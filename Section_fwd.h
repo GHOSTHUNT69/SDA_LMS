@@ -1,3 +1,5 @@
 #pragma once
 
-class Section;
+namespace LMS {
+	class Section;
+}

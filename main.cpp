@@ -1,7 +1,9 @@
 #include<iostream>
-using std::cout;
+#include<string>
+using namespace std;
 
 int main()
 {
 	cout << "Hello World";
+	char arr[] = "asasd";
 }

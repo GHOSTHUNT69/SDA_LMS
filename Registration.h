@@ -16,7 +16,8 @@ namespace LMS {
 		vector<Attendance*> sattendance;//student attendance
 	public:
 		Registration();
-		Registration(Student* student_, Section* ssection_, vector<EvaluationResult*> seresults_, vector<Attendance*> sattendance_);
+		Registration(Student* _student, Section* _ssection);
+		Registration(Student* _student, Section* _ssection, vector<EvaluationResult*> _seresults, vector<Attendance*> _sattendance);
 		~Registration();
 	};
 }
