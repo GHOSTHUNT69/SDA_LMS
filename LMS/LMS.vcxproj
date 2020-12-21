@@ -19,45 +19,45 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AcademicOfficer.cpp" />
-    <ClCompile Include="Attendance.cpp" />
-    <ClCompile Include="Course.cpp" />
-    <ClCompile Include="Evaluation.cpp" />
-    <ClCompile Include="EvaluationResult.cpp" />
-    <ClCompile Include="Faculty.cpp" />
-    <ClCompile Include="LMSDB.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Person.cpp" />
-    <ClCompile Include="Registration.cpp" />
-    <ClCompile Include="Section.cpp" />
-    <ClCompile Include="Session.cpp" />
-    <ClCompile Include="Student.cpp" />
+    <ClCompile Include="..\src\AcademicOfficer.cpp" />
+    <ClCompile Include="..\src\Attendance.cpp" />
+    <ClCompile Include="..\src\Course.cpp" />
+    <ClCompile Include="..\src\Evaluation.cpp" />
+    <ClCompile Include="..\src\EvaluationResult.cpp" />
+    <ClCompile Include="..\src\Faculty.cpp" />
+    <ClCompile Include="..\src\LMSDB.cpp" />
+    <ClCompile Include="..\src\Person.cpp" />
+    <ClCompile Include="..\src\Registration.cpp" />
+    <ClCompile Include="..\src\Section.cpp" />
+    <ClCompile Include="..\src\Session.cpp" />
+    <ClCompile Include="..\src\Student.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AcademicOfficer.h" />
-    <ClInclude Include="AcademicOfficer_fwd.h" />
-    <ClInclude Include="Attendance.h" />
-    <ClInclude Include="Attendance_fwd.h" />
-    <ClInclude Include="Course.h" />
-    <ClInclude Include="Course_fwd.h" />
-    <ClInclude Include="Evaluation.h" />
-    <ClInclude Include="EvaluationResult.h" />
-    <ClInclude Include="EvaluationResult_fwd.h" />
-    <ClInclude Include="Evaluation_fwd.h" />
-    <ClInclude Include="Faculty.h" />
-    <ClInclude Include="Faculty_fwd.h" />
-    <ClInclude Include="LMSDB.h" />
-    <ClInclude Include="LMSDB_fwd.h" />
-    <ClInclude Include="Person.h" />
-    <ClInclude Include="Person_fwd.h" />
-    <ClInclude Include="Registration.h" />
-    <ClInclude Include="Registration_fwd.h" />
-    <ClInclude Include="Section.h" />
-    <ClInclude Include="Section_fwd.h" />
-    <ClInclude Include="Session.h" />
-    <ClInclude Include="Session_fwd.h" />
-    <ClInclude Include="Student.h" />
-    <ClInclude Include="Student_fwd.h" />
+    <ClInclude Include="..\src\AcademicOfficer.h" />
+    <ClInclude Include="..\src\AcademicOfficer_fwd.h" />
+    <ClInclude Include="..\src\Attendance.h" />
+    <ClInclude Include="..\src\Attendance_fwd.h" />
+    <ClInclude Include="..\src\Course.h" />
+    <ClInclude Include="..\src\Course_fwd.h" />
+    <ClInclude Include="..\src\Evaluation.h" />
+    <ClInclude Include="..\src\EvaluationResult.h" />
+    <ClInclude Include="..\src\EvaluationResult_fwd.h" />
+    <ClInclude Include="..\src\Evaluation_fwd.h" />
+    <ClInclude Include="..\src\Faculty.h" />
+    <ClInclude Include="..\src\Faculty_fwd.h" />
+    <ClInclude Include="..\src\LMS.h" />
+    <ClInclude Include="..\src\LMSDB.h" />
+    <ClInclude Include="..\src\LMSDB_fwd.h" />
+    <ClInclude Include="..\src\Person.h" />
+    <ClInclude Include="..\src\Person_fwd.h" />
+    <ClInclude Include="..\src\Registration.h" />
+    <ClInclude Include="..\src\Registration_fwd.h" />
+    <ClInclude Include="..\src\Section.h" />
+    <ClInclude Include="..\src\Section_fwd.h" />
+    <ClInclude Include="..\src\Session.h" />
+    <ClInclude Include="..\src\Session_fwd.h" />
+    <ClInclude Include="..\src\Student.h" />
+    <ClInclude Include="..\src\Student_fwd.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -68,7 +68,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -129,6 +129,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>.\src;.\src\sqlite3;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

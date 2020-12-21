@@ -18,117 +18,117 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AcademicOfficer.cpp">
+    <ClCompile Include="..\src\AcademicOfficer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Attendance.cpp">
+    <ClCompile Include="..\src\Attendance.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Course.cpp">
+    <ClCompile Include="..\src\Course.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Evaluation.cpp">
+    <ClCompile Include="..\src\Evaluation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EvaluationResult.cpp">
+    <ClCompile Include="..\src\EvaluationResult.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Faculty.cpp">
+    <ClCompile Include="..\src\Faculty.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="LMSDB.cpp">
+    <ClCompile Include="..\src\LMSDB.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="..\src\Person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
+    <ClCompile Include="..\src\Registration.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Registration.cpp">
+    <ClCompile Include="..\src\Section.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Section.cpp">
+    <ClCompile Include="..\src\Session.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Session.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="..\src\Student.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AcademicOfficer_fwd.h">
+    <ClInclude Include="..\src\AcademicOfficer_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Attendance_fwd.h">
+    <ClInclude Include="..\src\Attendance_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Course_fwd.h">
+    <ClInclude Include="..\src\Course_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Evaluation_fwd.h">
+    <ClInclude Include="..\src\Evaluation_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="EvaluationResult_fwd.h">
+    <ClInclude Include="..\src\EvaluationResult_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Faculty_fwd.h">
+    <ClInclude Include="..\src\LMSDB_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="LMSDB_fwd.h">
+    <ClInclude Include="..\src\Faculty_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Person_fwd.h">
+    <ClInclude Include="..\src\Person_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Registration_fwd.h">
+    <ClInclude Include="..\src\Registration_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Section_fwd.h">
+    <ClInclude Include="..\src\Section_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Session_fwd.h">
+    <ClInclude Include="..\src\Session_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="Student_fwd.h">
+    <ClInclude Include="..\src\Student_fwd.h">
       <Filter>Forward Declaration</Filter>
     </ClInclude>
-    <ClInclude Include="AcademicOfficer.h">
+    <ClInclude Include="..\src\AcademicOfficer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Attendance.h">
+    <ClInclude Include="..\src\Attendance.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Course.h">
+    <ClInclude Include="..\src\Course.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Evaluation.h">
+    <ClInclude Include="..\src\Evaluation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EvaluationResult.h">
+    <ClInclude Include="..\src\EvaluationResult.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Faculty.h">
+    <ClInclude Include="..\src\Faculty.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="LMSDB.h">
+    <ClInclude Include="..\src\LMS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Person.h">
+    <ClInclude Include="..\src\LMSDB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Registration.h">
+    <ClInclude Include="..\src\Person.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Section.h">
+    <ClInclude Include="..\src\Registration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Session.h">
+    <ClInclude Include="..\src\Section.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Student.h">
+    <ClInclude Include="..\src\Session.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
