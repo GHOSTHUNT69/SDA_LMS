@@ -110,9 +110,6 @@
     <ClInclude Include="..\src\Faculty.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\LMS.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\LMSDB.h">
       <Filter>Header Files</Filter>
     </ClInclude>
