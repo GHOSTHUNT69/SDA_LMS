@@ -10,6 +10,11 @@ class GUI : public QMainWindow
 public:
     GUI(QWidget *parent = Q_NULLPTR);
 
+private slots:
+    void on_actionExit_triggered();
+
+    void on_pushButton_clicked();
+
 private:
     Ui::GUIClass ui;
 };

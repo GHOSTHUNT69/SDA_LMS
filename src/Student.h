@@ -10,7 +10,7 @@ using std::vector;
 
 namespace LMS {
 	class Student :
-		protected Person
+		public Person
 	{
 	protected:
 		string rollno;
@@ -20,6 +20,10 @@ namespace LMS {
 		Student(string rollno_, string name_, string dob_, string email_);
 		Student(string rollno_, string name_, string dob_, string email_, vector<Registration*> reg_);
 		~Student();
+		int fool()
+		{
+			this.
+		}
 		
 		bool addRegistration(Registration*  reg_);
 		bool addRegistration(Section*  reg_);

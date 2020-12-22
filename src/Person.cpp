@@ -6,12 +6,17 @@ namespace LMS {
 	{
 	}
 
-	Person::Person(string name_, string dob_, string email_)
-		:name(name_), dob(dob_), email(email_)
+	Person::Person(string name_, string dob_, string email_, string _uname, string _password)
+		:name(name_), dob(dob_), email(email_), username(_uname),password(_password)
 	{
 	}
 
 	Person::~Person() {}
+
+	string Person::get_username()
+	{
+		return username;
+	}
 
 	string Person::get_name()
 	{
@@ -26,5 +31,13 @@ namespace LMS {
 	string Person::get_email()
 	{
 		return email;
+	}
+	bool Person::check_login(string _uname, string _password)
+	{
+		return _uname==username && _password==password;
+	}
+	bool Person::check_pass(string pass)
+	{
+		return pass==password;
 	}
 }

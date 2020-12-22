@@ -1,6 +1,5 @@
 #include "GUI.h"
 #include <QtWidgets/QApplication>
-#include "Student.h"
 
 int main(int argc, char *argv[])
 {
