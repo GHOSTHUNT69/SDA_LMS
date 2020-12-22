@@ -6,13 +6,13 @@ namespace LMS {
 	{
 	}
 
-	Student::Student(string rollno_, string name_, string dob_, string email_)
-		:Person(name_, dob_, email_), rollno(rollno_)
+	Student::Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password)
+		:Person(name_, dob_, email_, _uname, _password), rollno(rollno_)
 	{
 	}
 
-	Student::Student(string rollno_, string name_, string dob_, string email_, vector<Registration*> reg_)
-		: Person(name_, dob_, email_), rollno(rollno_), sregistrations(reg_)
+	Student::Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password, vector<Registration*> reg_)
+		: Person(name_, dob_, email_,  _uname,  _password), rollno(rollno_), sregistrations(reg_)
 	{
 	}
 

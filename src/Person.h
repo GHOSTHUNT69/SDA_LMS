@@ -15,7 +15,7 @@ namespace LMS {
 		string email;
 	public:
 		Person();
-		Person(string name_, string dob_, string email_, string _uname,string _passwrod);
+		Person(string name_, string dob_, string email_, string _uname,string _password);
 		~Person();
 
 		string get_username();

@@ -17,13 +17,9 @@ namespace LMS {
 		vector<Registration*> sregistrations; //student registrations
 	public:
 		Student();
-		Student(string rollno_, string name_, string dob_, string email_);
-		Student(string rollno_, string name_, string dob_, string email_, vector<Registration*> reg_);
+		Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password);
+		Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password, vector<Registration*> reg_);
 		~Student();
-		int fool()
-		{
-			this.
-		}
 		
 		bool addRegistration(Registration*  reg_);
 		bool addRegistration(Section*  reg_);

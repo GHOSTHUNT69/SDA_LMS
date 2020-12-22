@@ -6,13 +6,13 @@ namespace LMS {
 	{
 	}
 
-	Faculty::Faculty(string name_, string dob_, string email_)
-		:Person(name_, dob_, email_)
+	Faculty::Faculty(string name_, string dob_, string email_, string _uname, string _password)
+		:Person(name_, dob_, email_,  _uname, _password)
 	{
 	}
 
-	Faculty::Faculty(string name_, string dob_, string email_, vector<Section*> fsections_)
-		: Person(name_, dob_, email_), fsections(fsections_)
+	Faculty::Faculty(string name_, string dob_, string email_, string _uname, string _password ,vector<Section*> fsections_)
+		:Person(name_, dob_, email_, _uname, _password), fsections(fsections_)
 	{
 	}
 

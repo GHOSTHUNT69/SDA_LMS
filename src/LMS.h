@@ -2,7 +2,7 @@
 #include"Student_fwd.h"
 #include"Faculty_fwd.h"
 #include"AcademicOfficer_fwd.h"
-#include"Person.h"
+#include"Person_fwd.h"
 #include<vector>
 #include<string>
 using std::string;
@@ -22,14 +22,14 @@ namespace LMS {
 		vector<Faculty*>teachers;
 		vector<AcademicOfficer*> officers;
 
-		bool slogin(string _username, string _password);
-		bool flogin(string _username, string _password);
-		bool ologin(string _username, string _password);
+		Person* slogin(string _username, string _password);
+		Person* flogin(string _username, string _password);
+		Person* ologin(string _username, string _password);
 	public:
-		int StudentLogin(string _username, string _password);
-		int FacultyLogin(string _username, string _password);
-		int OfficerLogin(string _username, string _password);
-		bool islogged();
+		Student* StudentLogin(string _username, string _password);
+		Faculty* FacultyLogin(string _username, string _password);
+		AcademicOfficer* OfficerLogin(string _username, string _password);
+		bool isLogged();
 		Person* LoggedUser();
 	};
 }

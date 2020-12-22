@@ -13,7 +13,7 @@ using std::vector;
 
 namespace LMS {
     class AcademicOfficer :
-        protected Person
+        public Person
     {
     protected:
         vector<Course*> courses;
