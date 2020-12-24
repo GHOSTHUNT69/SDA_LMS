@@ -1,4 +1,6 @@
-//https://www.tutorialspoint.com/sqlite/sqlite_c_cpp.htm
+// For help:https://www.tutorialspoint.com/sqlite/sqlite_c_cpp.htm
+// For viewing the sql data and table(you can also write queries just like Microsoft SQL)
+// https://sqlitebrowser.org/dl/
 #pragma once
 #include"sqlite3.h"
 
