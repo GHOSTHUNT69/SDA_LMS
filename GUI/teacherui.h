@@ -1,13 +1,14 @@
+#pragma once
 #ifndef TEACHERUI_H
 #define TEACHERUI_H
 
-#include <QtWidgets/QDialog>
+#include <QWidget>
 
 namespace Ui {
 class TeacherUI;
 }
 
-class TeacherUI : public QDialog
+class TeacherUI : public QWidget
 {
     Q_OBJECT
 

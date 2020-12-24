@@ -106,8 +106,10 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|Win32'" Label="QtSettings">
     <QtInstall>msvc2019x86</QtInstall>
-    <QtModules>core;gui;widgets</QtModules>
+    <QtModules>core;gui;sql;widgets</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
+    <QtHeaderSearchPath>include</QtHeaderSearchPath>
+    <QtLibrarySearchPath>include</QtLibrarySearchPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|Win32'" Label="QtSettings">
     <QtInstall>msvc2019x86</QtInstall>
@@ -170,14 +172,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="officerui.cpp" />
+    <ClCompile Include="studentui.cpp" />
+    <ClCompile Include="teacherui.cpp" />
     <QtRcc Include="GUI.qrc" />
     <QtUic Include="GUI.ui" />
     <QtMoc Include="GUI.h" />
     <ClCompile Include="GUI.cpp" />
     <ClCompile Include="main.cpp" />
+    <QtUic Include="officerui.ui" />
+    <QtUic Include="studentui.ui" />
+    <QtUic Include="teacherui.ui" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LMS.h" />
+    <QtMoc Include="officerui.h" />
+    <QtMoc Include="studentui.h" />
+    <QtMoc Include="teacherui.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

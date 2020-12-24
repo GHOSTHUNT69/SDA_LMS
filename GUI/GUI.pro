@@ -17,10 +17,19 @@ OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
 HEADERS += ./LMS.h \
-    ./GUI.h
+    ./GUI.h \
+    officerui.h \
+    studentui.h \
+    teacherui.h
 SOURCES += ./GUI.cpp \
-    ./main.cpp
-FORMS += ./GUI.ui
+    ./main.cpp \
+    officerui.cpp \
+    studentui.cpp \
+    teacherui.cpp
+FORMS += ./GUI.ui \
+    officerui.ui \
+    studentui.ui \
+    teacherui.ui
 RESOURCES += GUI.qrc
 
 # Default rules for deployment.

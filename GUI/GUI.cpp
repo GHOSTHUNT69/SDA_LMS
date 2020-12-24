@@ -1,3 +1,4 @@
+#pragma once
 #include "GUI.h"
 
 GUI::GUI(QWidget *parent)
@@ -13,4 +14,12 @@ void GUI::on_actionExit_triggered()
 
 void GUI::on_pushButton_clicked()
 {
+    oui=new OfficerUI();
+    hide();
+    oui->show();
+}
+
+void GUI::on_pushButton_2_clicked()
+{
+    GUI::close();
 }

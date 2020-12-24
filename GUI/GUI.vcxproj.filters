@@ -38,6 +38,15 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="officerui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="studentui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="teacherui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LMS.h">
@@ -48,5 +57,25 @@
     <QtUic Include="GUI.ui">
       <Filter>Form Files</Filter>
     </QtUic>
+    <QtUic Include="officerui.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="studentui.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="teacherui.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="officerui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="studentui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="teacherui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

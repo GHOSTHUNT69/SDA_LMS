@@ -1,7 +1,11 @@
 #pragma once
 
+#pragma once
 #include <QtWidgets/QMainWindow>
 #include "ui_GUI.h"
+#include "officerui.h"
+#include "studentui.h"
+#include "teacherui.h"
 
 class GUI : public QMainWindow
 {
@@ -15,6 +19,11 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::GUIClass ui;
+    OfficerUI*oui;
+    StudentUI*sui;
+    TeacherUI*tui;
 };
