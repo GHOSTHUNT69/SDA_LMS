@@ -57,6 +57,9 @@
     <ClCompile Include="..\src\LMS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\AcademicOfficer_fwd.h">
@@ -133,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="..\src\LMS.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\LMS_fwd.h">
+      <Filter>Forward Declaration</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

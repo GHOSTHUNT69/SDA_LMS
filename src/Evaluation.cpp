@@ -1,3 +1,4 @@
+#pragma once
 #include "Evaluation.h"
 
 namespace LMS {

@@ -27,6 +27,7 @@
     <ClCompile Include="..\src\Faculty.cpp" />
     <ClCompile Include="..\src\LMS.cpp" />
     <ClCompile Include="..\src\LMSDB.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
     <ClCompile Include="..\src\Person.cpp" />
     <ClCompile Include="..\src\Registration.cpp" />
     <ClCompile Include="..\src\Section.cpp" />
@@ -49,6 +50,7 @@
     <ClInclude Include="..\src\LMS.h" />
     <ClInclude Include="..\src\LMSDB.h" />
     <ClInclude Include="..\src\LMSDB_fwd.h" />
+    <ClInclude Include="..\src\LMS_fwd.h" />
     <ClInclude Include="..\src\Person.h" />
     <ClInclude Include="..\src\Person_fwd.h" />
     <ClInclude Include="..\src\Registration.h" />

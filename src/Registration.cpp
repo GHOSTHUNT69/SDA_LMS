@@ -1,4 +1,6 @@
+#pragma once
 #include "Registration.h"
+#include "Attendance.h"
 
 namespace LMS {
 
@@ -19,5 +21,9 @@ namespace LMS {
 
 	Registration::~Registration()
 	{
+	}
+	void Registration::markAttendance(int _attend)
+	{
+		sattendance.push_back(new Attendance(_attend));
 	}
 }

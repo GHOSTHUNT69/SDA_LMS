@@ -17,6 +17,9 @@ namespace LMS {
 		Faculty();
 		Faculty(string name_, string dob_, string email_, string _uname, string _password);
 		Faculty(string name_, string dob_, string email_, string _uname, string _password, vector<Section*>fsections_);
+		
+		void markAttendance();
+		
 		~Faculty();
 
 		//bool addSection();

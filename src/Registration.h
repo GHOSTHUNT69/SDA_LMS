@@ -19,6 +19,9 @@ namespace LMS {
 		Registration(Student* _student, Section* _ssection);
 		Registration(Student* _student, Section* _ssection, vector<EvaluationResult*> _seresults, vector<Attendance*> _sattendance);
 		~Registration();
+
+		void markAttendance(int _attend);
+		vector<Attendance*>getAttendance();
 	};
 }
 

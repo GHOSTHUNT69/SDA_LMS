@@ -1,6 +1,4 @@
 #pragma once
-
-#pragma once
 #include <QtWidgets/QMainWindow>
 #include "ui_GUI.h"
 #include "officerui.h"
@@ -26,4 +24,5 @@ private:
     OfficerUI*oui;
     StudentUI*sui;
     TeacherUI*tui;
+public:
 };

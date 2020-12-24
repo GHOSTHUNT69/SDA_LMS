@@ -185,7 +185,6 @@
     <QtUic Include="teacherui.ui" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="LMS.h" />
     <QtMoc Include="officerui.h" />
     <QtMoc Include="studentui.h" />
     <QtMoc Include="teacherui.h" />

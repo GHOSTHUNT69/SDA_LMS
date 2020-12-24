@@ -1,3 +1,4 @@
+#pragma once
 #include "Faculty.h"
 
 namespace LMS {

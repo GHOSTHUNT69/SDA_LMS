@@ -1,3 +1,4 @@
+#pragma once
 #include"AcademicOfficer.h"
 #include"Registration.h"
 #include"Student.h"
@@ -32,10 +33,20 @@ namespace LMS {
 		return true;
 	}
 
+	vector<Student*> AcademicOfficer::getStudents()
+	{
+		return students;
+	}
+
 	bool AcademicOfficer::addTeacher(Faculty*_teacher)
 	{
 		teachers.push_back(_teacher);
 		return true;
+	}
+
+	vector<Faculty*> AcademicOfficer::getTeachers()
+	{
+		return teachers;
 	}
 
 	bool AcademicOfficer::addSession(Session*_session)

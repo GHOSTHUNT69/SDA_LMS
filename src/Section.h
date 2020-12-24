@@ -26,6 +26,16 @@ namespace LMS {
 		Section(string _name, Course* _course, Faculty* _teacher, Session* _session, vector<Registration*> _regs, vector<Evaluation*>_evals);
 		~Section();
 
+		void markAttendance()
+		{
+
+		}
+
+		void getAttendance()
+		{
+
+		}
+
 		bool addRegistration(Registration*);
 	};
 }

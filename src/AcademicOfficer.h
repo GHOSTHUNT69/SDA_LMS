@@ -16,10 +16,10 @@ namespace LMS {
         public Person
     {
     protected:
-        vector<Course*> courses;
-        vector<Student*> students;
-        vector<Faculty*> teachers;
-        vector<Session*> sessions;
+        static vector<Course*> courses;
+        static vector<Student*> students;
+        static vector<Faculty*> teachers;
+        static vector<Session*> sessions;
     public:
         AcademicOfficer();
         ~AcademicOfficer();
@@ -30,9 +30,11 @@ namespace LMS {
         //student
         bool addStudent(Student*);
         bool registerStudent(Student*, Section*);
+        vector<Student*> getStudents();
 
         //teacher
         bool addTeacher(Faculty*);
+        vector<Faculty*> getTeachers();
 
         //session
         bool addSession(Session*);

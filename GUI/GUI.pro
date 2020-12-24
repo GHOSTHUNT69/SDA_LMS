@@ -6,6 +6,8 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
+INCLUDEPATH += $$PWD/../src/
+
 TEMPLATE = app
 TARGET = GUI
 DESTDIR = ../Debug
@@ -16,8 +18,7 @@ MOC_DIR += .
 OBJECTS_DIR += debug
 UI_DIR += .
 RCC_DIR += .
-HEADERS += ./LMS.h \
-    ./GUI.h \
+HEADERS += ./GUI.h \
     officerui.h \
     studentui.h \
     teacherui.h

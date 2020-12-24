@@ -13,24 +13,27 @@ namespace LMS {
 	constexpr auto LOG_FAIL = 0;
 	constexpr auto ALREADY_LOGGED = 2;
 
-	class LMS
+	class App
 	{
 	private:
 		bool islogged;
 		Person* loggedUser;
-		vector<Student*> students;
-		vector<Faculty*>teachers;
+
 		vector<AcademicOfficer*> officers;
 
-		Person* slogin(string _username, string _password);
+		/*Person* slogin(string _username, string _password);
 		Person* flogin(string _username, string _password);
-		Person* ologin(string _username, string _password);
+		Person* ologin(string _username, string _password);*/
 	public:
+		App();
 		Student* StudentLogin(string _username, string _password);
 		Faculty* FacultyLogin(string _username, string _password);
 		AcademicOfficer* OfficerLogin(string _username, string _password);
 		bool isLogged();
 		Person* LoggedUser();
+
+		//student
+		bool addStudent(Student*);
 	};
 }
 

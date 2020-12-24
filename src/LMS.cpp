@@ -7,46 +7,62 @@
 
 namespace LMS
 {
+    //Person* LMS::slogin(string _username, string _password)
+    //{
+    //    /*for (auto student : students)
+    //        if (student->check_login(_username, _password))
+    //            return student;
+    //    return nullptr;*/
+    //}
 
-    Person* LMS::slogin(string _username, string _password)
+    //Person* LMS::flogin(string _username, string _password)
+    //{
+    //    /*for (auto student : students)
+    //        if (student->check_login(_username, _password))
+    //            return student;
+    //    return nullptr;*/
+    //}
+
+    //Person* LMS::ologin(string _username, string _password)
+    //{
+    //    return nullptr;
+    //}
+
+    App::App()
     {
-        for (auto student : students)
-            if (student->check_login(_username, _password))
-                return student;
+    }
+
+    Student* App::StudentLogin(string _username, string _password)
+    {
+        try
+        {
+            for (auto student : ((AcademicOfficer*)loggedUser)->getStudents())
+                if (student->check_login(_username, _password))
+                    return student;
+        }
+        catch (const std::exception&)
+        {
+            return nullptr;
+        }
         return nullptr;
     }
 
-    Person* LMS::flogin(string _username, string _password)
+    Faculty* App::FacultyLogin(string _username, string _password)
     {
-        for (auto student : students)
-            if (student->check_login(_username, _password))
-                return student;
+        try 
+        {
+            for (auto teacher : ((AcademicOfficer*)loggedUser)->getTeachers())
+                if (teacher->check_login(_username, _password))
+                    return teacher;
+        }
+        catch (const std::exception&)
+        {
+            return nullptr;
+        }
         return nullptr;
     }
 
-    Person* LMS::ologin(string _username, string _password)
-    {
-        return nullptr;
-    }
-
-    Student* LMS::StudentLogin(string _username, string _password)
-    {
-
-        for (auto student : students)
-            if (student->check_login(_username, _password))
-                return student;
-        return nullptr;
-    }
-
-    Faculty* LMS::FacultyLogin(string _username, string _password)
-    {
-        for (auto teacher : teachers)
-            if (teacher->check_login(_username, _password))
-                return teacher;
-        return nullptr;
-    }
-
-    AcademicOfficer* LMS::OfficerLogin(string _username, string _password)
+    AcademicOfficer* App::OfficerLogin(string _username, string _password)
     {
         for (auto officer : officers)
             if (officer->check_login(_username, _password))
@@ -54,13 +70,28 @@ namespace LMS
         return nullptr;
     }
 
-    bool LMS::isLogged()
+    bool App::isLogged()
     {
         return islogged;
     }
 
-    Person* LMS::LoggedUser()
+    Person* App::LoggedUser()
     {
         return loggedUser;
+    }
+    bool App::addStudent(Student*_new)
+    {
+        try
+        {
+            ((AcademicOfficer*)loggedUser)->addStudent(_new);
+            return true;
+        }
+        catch (const std::exception&)
+        {
+            //cout<<e.what();
+            return false;
+        }
+
+        return false;
     }
 }
