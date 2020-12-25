@@ -22,6 +22,7 @@ namespace LMS {
 		string get_name();
 		string get_dob();
 		string get_email();
+		virtual string get_role()=0;
 		bool check_login(string _uname, string _password);
 		bool check_pass(string pass);
 	};

@@ -17,6 +17,11 @@ namespace LMS {
 	{
 	}
 
+	string Faculty::get_role()
+	{
+		return "teacher";
+	}
+
 	Faculty::~Faculty()
 	{
 	}

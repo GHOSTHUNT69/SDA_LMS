@@ -20,6 +20,10 @@ namespace LMS {
 	Student::~Student()
 	{
 	}
+	string Student::get_role()
+	{
+		return "student";
+	}
 	bool Student::addRegistration(Registration* reg_)
 	{
 		sregistrations.push_back(reg_);

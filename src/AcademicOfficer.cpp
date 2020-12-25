@@ -7,12 +7,23 @@
 #include"Session.h"
 
 namespace LMS {
+
+	vector<Course*> AcademicOfficer::courses;
+	vector<Student*> AcademicOfficer::students;
+	vector<Faculty*> AcademicOfficer::teachers;
+	vector<Session*> AcademicOfficer::sessions;
+
 	AcademicOfficer::AcademicOfficer()
 	{
 	}
 
 	AcademicOfficer::~AcademicOfficer()
 	{
+	}
+
+	string AcademicOfficer::get_role()
+	{
+		return "officer";
 	}
 
 	bool AcademicOfficer::addCourse(Course* _course)
@@ -49,6 +60,16 @@ namespace LMS {
 	vector<Faculty*> AcademicOfficer::getTeachers()
 	{
 		return teachers;
+	}
+
+	vector<Course*> AcademicOfficer::getCourses()
+	{
+		return courses;
+	}
+
+	vector<Session*> AcademicOfficer::getSessions()
+	{
+		return sessions;
 	}
 
 	bool AcademicOfficer::addSession(Session*_session)

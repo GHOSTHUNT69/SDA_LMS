@@ -28,28 +28,32 @@ namespace LMS
     //    return nullptr;
     //}
 
-    /*App::App()
+    App::App()
     {
         islogged = false;
         loggedUser = nullptr;
+        loggedUser = new AcademicOfficer();
     }
 
     App::~App()
     {
-    }*/
+    }
+
+    Person* App::Login(string _username, string _password)
+    {
+        Person* ret;
+        ret = OfficerLogin(_username, _password);
+        if (ret) return ret;
+        ret = FacultyLogin(_username, _password);
+        if (ret) return ret; 
+        ret = StudentLogin(_username, _password);
+        if (ret) return ret;
+        return nullptr;
+    }
 
     Student* App::StudentLogin(string _username, string _password)
     {
-        try
-        {
-            for (auto student : ((AcademicOfficer*)loggedUser)->getStudents())
-                if (student->check_login(_username, _password))
-                    return student;
-        }
-        catch (const std::exception&)
-        {
-            return nullptr;
-        }
+        
         return nullptr;
     }
 

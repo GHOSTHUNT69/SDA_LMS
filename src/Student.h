@@ -26,6 +26,7 @@ namespace LMS {
 		Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password, vector<Registration*> reg_);
 		~Student();
 		
+		string get_role();
 		bool addRegistration(Registration*  reg_);
 		bool addRegistration(Section*  reg_);
 	};
