@@ -27,7 +27,9 @@ namespace LMS {
 		LMSDB();
 		~LMSDB();
 		void initializeTables();
-		void storeStudents(vector<Student*>_students);
+		void storeStudents();
+		void storeFaculty();
+		void storeCourses();
 		//store faculty
 		//store courses etc
 
