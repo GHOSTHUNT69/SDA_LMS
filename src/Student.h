@@ -17,6 +17,11 @@ namespace LMS {
 		vector<Registration*> sregistrations; //student registrations
 	public:
 		Student();
+		/*Student(int a)
+			:Person(3)
+		{
+			int j = a;
+		}*/
 		Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password);
 		Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password, vector<Registration*> reg_);
 		~Student();

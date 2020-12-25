@@ -4,6 +4,9 @@
 #include "officerui.h"
 #include "studentui.h"
 #include "teacherui.h"
+#include"LMS.h"
+
+
 
 class GUI : public QMainWindow
 {
@@ -25,4 +28,5 @@ private:
     StudentUI*sui;
     TeacherUI*tui;
 public:
+    LMS::App *lmsdata = new LMS::App();
 };

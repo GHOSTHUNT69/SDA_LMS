@@ -28,9 +28,15 @@ namespace LMS
     //    return nullptr;
     //}
 
-    App::App()
+    /*App::App()
     {
+        islogged = false;
+        loggedUser = nullptr;
     }
+
+    App::~App()
+    {
+    }*/
 
     Student* App::StudentLogin(string _username, string _password)
     {

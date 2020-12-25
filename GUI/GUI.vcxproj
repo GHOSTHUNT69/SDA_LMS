@@ -189,6 +189,11 @@
     <QtMoc Include="studentui.h" />
     <QtMoc Include="teacherui.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMS\LMS.vcxproj">
+      <Project>{10a29099-dab7-4efe-b4a2-71e8780cfaf4}</Project>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
     <Import Project="$(QtMsBuild)\qt.targets" />

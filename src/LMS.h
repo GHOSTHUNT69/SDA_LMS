@@ -25,7 +25,13 @@ namespace LMS {
 		Person* flogin(string _username, string _password);
 		Person* ologin(string _username, string _password);*/
 	public:
-		App();
+		App() {}
+		App(int a)
+		{
+			islogged = false;
+			loggedUser = nullptr;
+		}
+		~App() {}
 		Student* StudentLogin(string _username, string _password);
 		Faculty* FacultyLogin(string _username, string _password);
 		AcademicOfficer* OfficerLogin(string _username, string _password);
