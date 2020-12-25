@@ -2,9 +2,13 @@
 // For viewing the sql data and table(you can also write queries just like Microsoft SQL)
 // https://sqlitebrowser.org/dl/
 #pragma once
+#include"Student_fwd.h"
 #include"sqlite3.h"
 #include<string>
+#include<vector>
+using std::vector;
 using std::string;
+
 /*
 * functions to
 * initialize tables
@@ -22,6 +26,14 @@ namespace LMS {
 	public:
 		LMSDB();
 		~LMSDB();
+		void initializeTables();
+		void storeStudents(vector<Student*>_students);
+		//store faculty
+		//store courses etc
+
+		vector<Student*> retriveStudents();
+		//etc
+
 		static int callback(void* NotUsed, int argc, char** argv, char** azColName);
 
 	};
