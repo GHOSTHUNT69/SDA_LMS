@@ -47,6 +47,9 @@
     <ClCompile Include="teacherui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="LMSData.h">
+      <Filter>Header Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="GUI.ui">

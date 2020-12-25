@@ -1,6 +1,10 @@
 #pragma once
 #include "officerui.h"
 #include "ui_officerui.h"
+#include"string"
+#include "LMSData.h"
+#include "Student.h"
+#include<QMessageBox>
 
 OfficerUI::OfficerUI(QWidget *parent) :
     QWidget(parent),
@@ -26,5 +30,17 @@ void OfficerUI::on_newStudent_clicked()
 
 void OfficerUI::on_pushButton_4_clicked()//add student
 {
-    //lmsdata->addStudent(new Student());
+    string sname= ui->sname->text().toStdString();
+    string semail= ui->semail->text().toStdString();
+    string spass= ui->spass->text().toStdString();
+    string srollno= ui->srollno->text().toStdString();
+    string sdob= ui->sdob->text().toStdString();
+    string susername= ui->susername->text().toStdString();
+    uint ssize=sname.size()*semail.size()*spass.size()*srollno.size()*sdob.size()*susername.size();
+    if(ssize>0)
+    lmsdata->addStudent(new LMS::Student(srollno,sname,sdob,semail,susername,spass));
+    else
+    {
+        QMessageBox::information(this,"Invalid Input","Please check your input details");
+    }
 }

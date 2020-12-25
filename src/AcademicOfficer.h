@@ -15,11 +15,11 @@ namespace LMS {
     class AcademicOfficer :
         public Person
     {
-    protected:
-        static vector<Course*> courses;
-        static vector<Student*> students;
-        static vector<Faculty*> teachers;
-        static vector<Session*> sessions;
+    public:
+        vector<Course*> courses;
+        vector<Student*> students;
+        vector<Faculty*> teachers;
+        vector<Session*> sessions;
     public:
         AcademicOfficer();
         ~AcademicOfficer();

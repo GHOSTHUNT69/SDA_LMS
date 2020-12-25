@@ -1,5 +1,7 @@
 #pragma once
 #include "GUI.h"
+LMS::App* lmsdata = new LMS::App();
+
 
 GUI::GUI(QWidget *parent)
     : QMainWindow(parent)

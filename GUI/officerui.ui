@@ -308,7 +308,7 @@ QTableWidget, #error_image {
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit"/>
+          <widget class="QLineEdit" name="sname"/>
          </item>
          <item row="1" column="0">
           <widget class="QLabel" name="label_4">
@@ -318,7 +318,7 @@ QTableWidget, #error_image {
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_2"/>
+          <widget class="QLineEdit" name="srollno"/>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="label_8">
@@ -328,7 +328,7 @@ QTableWidget, #error_image {
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLineEdit" name="lineEdit_5"/>
+          <widget class="QLineEdit" name="sdob"/>
          </item>
          <item row="3" column="0">
           <widget class="QLabel" name="label_7">
@@ -338,7 +338,7 @@ QTableWidget, #error_image {
           </widget>
          </item>
          <item row="3" column="1">
-          <widget class="QLineEdit" name="lineEdit_6"/>
+          <widget class="QLineEdit" name="semail"/>
          </item>
          <item row="4" column="0">
           <widget class="QLabel" name="label_5">
@@ -348,7 +348,7 @@ QTableWidget, #error_image {
           </widget>
          </item>
          <item row="4" column="1">
-          <widget class="QLineEdit" name="lineEdit_3"/>
+          <widget class="QLineEdit" name="susername"/>
          </item>
          <item row="5" column="0">
           <widget class="QLabel" name="label_6">
@@ -358,7 +358,7 @@ QTableWidget, #error_image {
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QLineEdit" name="lineEdit_4"/>
+          <widget class="QLineEdit" name="spass"/>
          </item>
         </layout>
        </item>

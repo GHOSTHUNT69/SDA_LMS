@@ -4,7 +4,7 @@
 #include "officerui.h"
 #include "studentui.h"
 #include "teacherui.h"
-#include"LMS.h"
+#include "LMS.h"
 
 
 
@@ -28,5 +28,4 @@ private:
     StudentUI*sui;
     TeacherUI*tui;
 public:
-    LMS::App *lmsdata = new LMS::App();
 };

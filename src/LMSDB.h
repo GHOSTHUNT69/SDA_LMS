@@ -2,7 +2,7 @@
 // For viewing the sql data and table(you can also write queries just like Microsoft SQL)
 // https://sqlitebrowser.org/dl/
 #pragma once
-#include"sqlite3.h"
+#include "sqlite3.h"
 
 /*
 * functions to

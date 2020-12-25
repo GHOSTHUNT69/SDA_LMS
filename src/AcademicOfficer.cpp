@@ -3,6 +3,8 @@
 #include"Registration.h"
 #include"Student.h"
 #include"Section.h"
+#include"Course.h"
+#include"Session.h"
 
 namespace LMS {
 	AcademicOfficer::AcademicOfficer()

@@ -172,6 +172,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="LMSData.h" />
     <ClCompile Include="officerui.cpp" />
     <ClCompile Include="studentui.cpp" />
     <ClCompile Include="teacherui.cpp" />
