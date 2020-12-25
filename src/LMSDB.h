@@ -3,7 +3,8 @@
 // https://sqlitebrowser.org/dl/
 #pragma once
 #include"sqlite3.h"
-
+#include<string>
+using std::string;
 /*
 * functions to
 * initialize tables
@@ -17,7 +18,11 @@
 namespace LMS {
 	class LMSDB
 	{
-		
+		sqlite3* db;
+	public:
+		LMSDB();
+		~LMSDB();
+		static int callback(void* NotUsed, int argc, char** argv, char** azColName);
 
 	};
 }
