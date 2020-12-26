@@ -6,7 +6,7 @@ namespace LMS
 {
 	Attendance::Attendance()
 	{
-		atime = { -1 };
+		atime = {-1};
 		attend = -1;
 	}
 
@@ -15,7 +15,7 @@ namespace LMS
 		struct tm tPtr;
 		time_t now = time(0);
 		localtime_s(&tPtr, &now);
-		atime = { tPtr.tm_mday, tPtr.tm_mon + 1, tPtr.tm_year + 1990 };
+		atime = {tPtr.tm_mday, tPtr.tm_mon + 1, tPtr.tm_year + 1990};
 		attend = _attend;
 	}
 
@@ -60,4 +60,4 @@ namespace LMS
 	{
 		atime = _atime;
 	}
-}
+} // namespace LMS

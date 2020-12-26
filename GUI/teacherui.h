@@ -4,8 +4,9 @@
 
 #include <QWidget>
 
-namespace Ui {
-class TeacherUI;
+namespace Ui
+{
+    class TeacherUI;
 }
 
 class TeacherUI : public QWidget

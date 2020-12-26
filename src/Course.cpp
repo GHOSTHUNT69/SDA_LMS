@@ -1,19 +1,20 @@
 #pragma once
 #include "Course.h"
 
-namespace LMS {
+namespace LMS
+{
 
 	Course::Course()
 	{
 	}
 
 	Course::Course(string _name, string _code)
-		:cname(_name), ccode(_code)
+		: cname(_name), ccode(_code)
 	{
 	}
 
-	Course::Course(string _name, string _code, vector<Section*> _secs)
-		:cname(_name),ccode(_code),csections(_secs)
+	Course::Course(string _name, string _code, vector<Section *> _secs)
+		: cname(_name), ccode(_code), csections(_secs)
 	{
 	}
 
@@ -21,7 +22,7 @@ namespace LMS {
 	{
 	}
 
-	bool Course::addSection(Section* _sec)
+	bool Course::addSection(Section *_sec)
 	{
 		csections.push_back(_sec);
 		return true;
@@ -37,8 +38,8 @@ namespace LMS {
 		return ccode;
 	}
 
-	vector<Section*> Course::get_csections()
+	vector<Section *> Course::get_csections()
 	{
 		return csections;
 	}
-}
+} // namespace LMS

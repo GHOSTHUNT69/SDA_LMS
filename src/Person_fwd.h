@@ -1,5 +1,6 @@
 #pragma once
 
-namespace LMS {
+namespace LMS
+{
 	class Person;
 }

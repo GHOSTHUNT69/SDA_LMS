@@ -1,7 +1,8 @@
 #pragma once
 #include "Evaluation.h"
 
-namespace LMS {
+namespace LMS
+{
 
 	Evaluation::Evaluation()
 	{
@@ -10,4 +11,4 @@ namespace LMS {
 	Evaluation::~Evaluation()
 	{
 	}
-}
+} // namespace LMS

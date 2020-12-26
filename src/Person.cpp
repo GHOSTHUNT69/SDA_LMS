@@ -1,14 +1,15 @@
 #pragma once
 #include "Person.h"
 
-namespace LMS {
+namespace LMS
+{
 
 	Person::Person()
 	{
 	}
 
 	Person::Person(string name_, string dob_, string email_, string _uname, string _password)
-		:name(name_), dob(dob_), email(email_), username(_uname),password(_password)
+		: name(name_), dob(dob_), email(email_), username(_uname), password(_password)
 	{
 	}
 
@@ -39,10 +40,10 @@ namespace LMS {
 	}
 	bool Person::check_login(string _uname, string _password)
 	{
-		return _uname==username && _password==password;
+		return _uname == username && _password == password;
 	}
 	bool Person::check_pass(string pass)
 	{
-		return pass==password;
+		return pass == password;
 	}
-}
+} // namespace LMS

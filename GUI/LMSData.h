@@ -1,3 +1,3 @@
 #pragma once
 #include "LMS.h"
-extern LMS::App* lmsdata;
+extern LMS::App *lmsdata;

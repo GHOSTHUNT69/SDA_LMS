@@ -1,14 +1,15 @@
 #pragma once
 #include "Session.h"
 
-namespace LMS {
+namespace LMS
+{
     Session::Session()
-        :regOpen(true)
+        : regOpen(true)
     {
     }
 
-    Session::Session(string sessionD_, vector<Section*> sesection_, bool regOpen_)
-        :sessionD(sessionD_), sesection(sesection_), regOpen(regOpen_)
+    Session::Session(string sessionD_, vector<Section *> sesection_, bool regOpen_)
+        : sessionD(sessionD_), sesection(sesection_), regOpen(regOpen_)
     {
     }
 
@@ -16,7 +17,7 @@ namespace LMS {
     {
     }
 
-    bool Session::addSection(Section* _sec)
+    bool Session::addSection(Section *_sec)
     {
         sesection.push_back(_sec);
         return true;
@@ -26,9 +27,9 @@ namespace LMS {
     {
         regOpen = false;
     }
-    
+
     bool Session::isRegOpen()
     {
         return regOpen;
     }
-}
+} // namespace LMS

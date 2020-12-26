@@ -3,14 +3,15 @@
 #define OFFICERUI_H
 
 #include <QWidget>
-#include<QTableWidget>
-#include<QTableWidgetItem>
+#include <QTableWidget>
+#include <QTableWidgetItem>
+#include <QCloseEvent>
 //#include "LMS.h"
 
-namespace Ui {
-class OfficerUI;
+namespace Ui
+{
+    class OfficerUI;
 }
-
 
 //extern LMS::LMS* lmsdata;
 
@@ -20,6 +21,7 @@ class OfficerUI : public QWidget
 
 public:
     explicit OfficerUI(QWidget *parent = nullptr);
+    void closeEvent(QCloseEvent *event);
     ~OfficerUI();
 
 private slots:
@@ -56,6 +58,28 @@ private slots:
     void on_pushButton_15_clicked();
 
     void on_sviewtableWidget_2_cellActivated(int row, int column);
+
+    void on_pushButton_18_clicked();
+
+    void on_pushButton_21_clicked();
+
+    void on_pushButton_22_clicked();
+
+    void on_comboBox_activated(const QString &arg1);
+
+    void on_comboBox_2_activated(const QString &arg1);
+
+    void on_pushButton_20_clicked();
+
+    void on_pushButton_23_clicked();
+
+    void on_sections_clicked();
+
+    void on_pushButton_24_clicked();
+
+    void on_courses_clicked();
+
+    void on_pushButton_26_clicked();
 
 private:
     Ui::OfficerUI *ui;

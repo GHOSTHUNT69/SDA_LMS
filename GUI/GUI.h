@@ -6,8 +6,6 @@
 #include "teacherui.h"
 #include "LMS.h"
 
-
-
 class GUI : public QMainWindow
 {
     Q_OBJECT
@@ -24,8 +22,9 @@ private slots:
 
 private:
     Ui::GUIClass ui;
-    OfficerUI*oui;
-    StudentUI*sui;
-    TeacherUI*tui;
+    OfficerUI *oui;
+    StudentUI *sui;
+    TeacherUI *tui;
+
 public:
 };

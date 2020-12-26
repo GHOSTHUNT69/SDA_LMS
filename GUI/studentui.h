@@ -4,8 +4,9 @@
 
 #include <QWidget>
 
-namespace Ui {
-class StudentUI;
+namespace Ui
+{
+    class StudentUI;
 }
 
 class StudentUI : public QWidget

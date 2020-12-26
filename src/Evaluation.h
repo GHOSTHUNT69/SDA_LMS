@@ -1,17 +1,16 @@
 #pragma once
 #include "EvaluationResult_fwd.h"
-#include<vector>
+#include <vector>
 using std::vector;
 
-namespace LMS {
+namespace LMS
+{
 	class Evaluation
 	{
 	protected:
-		vector<EvaluationResult*> evaluationR;//evaluation results
+		vector<EvaluationResult *> evaluationR; //evaluation results
 	public:
 		Evaluation();
 		~Evaluation();
-
 	};
-}
-
+} // namespace LMS

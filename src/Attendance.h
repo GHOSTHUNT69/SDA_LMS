@@ -1,7 +1,8 @@
 #pragma once
 //#include"Registration_fwd.h"
 
-namespace LMS {
+namespace LMS
+{
 	constexpr auto ABSENT = 0;
 	constexpr auto PRESENT = 1;
 	constexpr auto LATE = 2;
@@ -31,4 +32,4 @@ namespace LMS {
 		time_a getTime();
 		void changeTime(time_a _atime);
 	};
-}
+} // namespace LMS

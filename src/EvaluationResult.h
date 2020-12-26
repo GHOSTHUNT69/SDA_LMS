@@ -1,11 +1,11 @@
 #pragma once
-#include"Evaluation_fwd.h"
+#include "Evaluation_fwd.h"
 
-namespace LMS {
+namespace LMS
+{
 	class EvaluationResult
 	{
 	protected:
-		Evaluation* eval;
+		Evaluation *eval;
 	};
-}
-
+} // namespace LMS
