@@ -17,6 +17,11 @@ namespace LMS {
 	{
 	}
 
+	AcademicOfficer::AcademicOfficer(string name_, string dob_, string email_, string _uname, string _password)
+		:Person(name_,dob_,email_,_uname,_password)
+	{
+	}
+
 	AcademicOfficer::~AcademicOfficer()
 	{
 	}

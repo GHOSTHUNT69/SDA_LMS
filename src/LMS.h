@@ -3,6 +3,8 @@
 #include"Faculty_fwd.h"
 #include"AcademicOfficer_fwd.h"
 #include"Person_fwd.h"
+#include"Section_fwd.h"
+#include"Course_fwd.h"
 #include<vector>
 #include<string>
 using std::string;
@@ -28,13 +30,18 @@ namespace LMS {
 		App();
 		~App();
 
-		Person* Login(string _username, string _password);
+		bool Login(string _username, string _password);
+		bool Logout();
 
 		bool isLogged();
 		Person* LoggedUser();
 
-		//student
 		bool addStudent(Student*);
+		bool addTeacher(Faculty*);
+		bool addSection(Section*);
+		bool addCourse(Course*);
+		vector<Student*> getStudents();
+		vector<Faculty*> getTeachers();
 	};
 }
 

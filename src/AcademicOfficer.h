@@ -20,31 +20,25 @@ namespace LMS {
         static vector<Student*> students;
         static vector<Faculty*> teachers;
         static vector<Session*> sessions;
+    public:
+        AcademicOfficer();
+        AcademicOfficer(string name_, string dob_, string email_, string _uname, string _password);
+        ~AcademicOfficer();
+
+        string get_role();
 
         static vector<Student*> getStudents();
         static vector<Faculty*> getTeachers();
         static vector<Course*> getCourses();
         static vector<Session*> getSessions();
-    public:
-        AcademicOfficer();
-        ~AcademicOfficer();
 
-        string get_role();
+        static bool addStudent(Student*);
+        static bool addTeacher(Faculty*);
+        static bool addCourse(Course*);
+        static bool addSession(Session*);
+        static bool addSection();
 
-        //course
-        bool addCourse(Course*);
-
-        //student
-        bool addStudent(Student*);
-        bool registerStudent(Student*, Section*);
-        //vector<Student*> getStudents();
-
-        //teacher
-        bool addTeacher(Faculty*);
-        //vector<Faculty*> getTeachers();
-
-        //session
-        bool addSession(Session*);
-
+        static bool registerStudent(Student*, Section*);
+        
     };
 }

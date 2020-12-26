@@ -4,104 +4,126 @@
 #include "AcademicOfficer.h"
 #include "Student.h"
 #include "Faculty.h"
+#include "Section.h"
+#include "Course.h"
 
 namespace LMS
 {
-    //Person* LMS::slogin(string _username, string _password)
-    //{
-    //    /*for (auto student : students)
-    //        if (student->check_login(_username, _password))
-    //            return student;
-    //    return nullptr;*/
-    //}
 
-    //Person* LMS::flogin(string _username, string _password)
-    //{
-    //    /*for (auto student : students)
-    //        if (student->check_login(_username, _password))
-    //            return student;
-    //    return nullptr;*/
-    //}
+	App::App()
+	{
+		islogged = false;
+		loggedUser = nullptr;
+		//loggedUser = new AcademicOfficer();
+		officers.push_back(new AcademicOfficer("admin", "", "admin@example.com", "admin", "admin"));
+	}
 
-    //Person* LMS::ologin(string _username, string _password)
-    //{
-    //    return nullptr;
-    //}
+	App::~App()
+	{
+	}
 
-    App::App()
-    {
-        islogged = false;
-        loggedUser = nullptr;
-        loggedUser = new AcademicOfficer();
-    }
+	bool App::Login(string _username, string _password)
+	{
+		if (islogged)
+			return false;
+		loggedUser = OfficerLogin(_username, _password);
+		if (loggedUser)
+		{
+			islogged = true;
 
-    App::~App()
-    {
-    }
+			return true;
+		}
+		loggedUser = FacultyLogin(_username, _password);
+		if (loggedUser) {
+			islogged = true;
+			return true;
+		}
+		loggedUser = StudentLogin(_username, _password);
+		if (loggedUser) {
+			islogged = true;
+			return true;
+		}
+		return false;
+	}
 
-    Person* App::Login(string _username, string _password)
-    {
-        Person* ret;
-        ret = OfficerLogin(_username, _password);
-        if (ret) return ret;
-        ret = FacultyLogin(_username, _password);
-        if (ret) return ret; 
-        ret = StudentLogin(_username, _password);
-        if (ret) return ret;
-        return nullptr;
-    }
+	bool App::Logout()
+	{
+		if (islogged)
+		{
+			islogged = false;
+			loggedUser = nullptr;
+			return true;
+		}
+		return false;
+	}
 
-    Student* App::StudentLogin(string _username, string _password)
-    {
-        
-        return nullptr;
-    }
+	Student* App::StudentLogin(string _username, string _password)
+	{
+		for (auto x : AcademicOfficer::getStudents())
+			if (x->check_login(_username, _password))
+				return x;
+		return nullptr;
+	}
 
-    Faculty* App::FacultyLogin(string _username, string _password)
-    {
-        try 
-        {
-            for (auto teacher : ((AcademicOfficer*)loggedUser)->getTeachers())
-                if (teacher->check_login(_username, _password))
-                    return teacher;
-        }
-        catch (const std::exception&)
-        {
-            return nullptr;
-        }
-        return nullptr;
-    }
+	Faculty* App::FacultyLogin(string _username, string _password)
+	{
+		for (auto x : AcademicOfficer::getTeachers())
+			if (x->check_login(_username, _password))
+				return x;
+		return nullptr;
+	}
 
-    AcademicOfficer* App::OfficerLogin(string _username, string _password)
-    {
-        for (auto officer : officers)
-            if (officer->check_login(_username, _password))
-                return officer;
-        return nullptr;
-    }
+	AcademicOfficer* App::OfficerLogin(string _username, string _password)
+	{
+		for (auto officer : officers)
+			if (officer->check_login(_username, _password))
+				return officer;
+		return nullptr;
+	}
 
-    bool App::isLogged()
-    {
-        return islogged;
-    }
+	bool App::isLogged()
+	{
+		return islogged;
+	}
 
-    Person* App::LoggedUser()
-    {
-        return loggedUser;
-    }
-    bool App::addStudent(Student*_new)
-    {
-        try
-        {
-            ((AcademicOfficer*)loggedUser)->addStudent(_new);
-            return true;
-        }
-        catch (const std::exception&)
-        {
-            //cout<<e.what();
-            return false;
-        }
-
-        return false;
-    }
+	Person* App::LoggedUser()
+	{
+		return loggedUser;
+	}
+	bool App::addStudent(Student* _new)
+	{
+		if (islogged && loggedUser->get_role() == "officer")
+		{
+			AcademicOfficer::addStudent(_new);
+			return true;
+		}
+		return false;
+	}
+	bool App::addTeacher(Faculty*_new)
+	{
+		if (islogged && loggedUser->get_role() == "officer")
+		{
+			AcademicOfficer::addTeacher(_new);
+			return true;
+		}
+		return false;
+	}
+	bool App::addSection(Section*_new)
+	{
+		/*if (islogged && loggedUser->get_role() == "officer")
+		{
+			AcademicOfficer::addSection(_new);
+			return true;
+		}
+		*/
+		return false;
+	}
+	vector<Student*> App::getStudents()
+	{
+		return AcademicOfficer::getStudents();
+	}
+	vector<Faculty*> App::getTeachers()
+	{
+		return AcademicOfficer::getTeachers();
+	}
 }

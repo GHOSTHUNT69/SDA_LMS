@@ -33,6 +33,10 @@ namespace LMS {
 	{
 		return email;
 	}
+	string Person::get_pass()
+	{
+		return password;
+	}
 	bool Person::check_login(string _uname, string _password)
 	{
 		return _uname==username && _password==password;

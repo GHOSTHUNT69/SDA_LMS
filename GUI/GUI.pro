@@ -12,7 +12,8 @@ TEMPLATE = app
 TARGET = GUI
 DESTDIR = ../Debug
 CONFIG += debug
-LIBS += -L"."
+LIBS += -L"." \
+    $$PWD/../Debug/LMS.lib
 DEPENDPATH += .
 MOC_DIR += .
 OBJECTS_DIR += debug

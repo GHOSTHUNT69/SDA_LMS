@@ -27,6 +27,8 @@ namespace LMS {
 		~Student();
 		
 		string get_role();
+		string get_rollno();
+
 		bool addRegistration(Registration*  reg_);
 		bool addRegistration(Section*  reg_);
 	};

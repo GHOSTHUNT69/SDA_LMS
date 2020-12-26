@@ -24,6 +24,10 @@ namespace LMS {
 	{
 		return "student";
 	}
+	string Student::get_rollno()
+	{
+		return rollno;
+	}
 	bool Student::addRegistration(Registration* reg_)
 	{
 		sregistrations.push_back(reg_);
