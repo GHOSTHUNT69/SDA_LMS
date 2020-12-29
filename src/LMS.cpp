@@ -84,6 +84,30 @@ namespace LMS
 		return nullptr;
 	}
 
+	Section* App::getSection(string sectionName)
+	{
+		for (auto i : AcademicOfficer::getSections())
+			if (i->get_name() == sectionName)
+				return i;
+		return nullptr;
+	}
+
+	Course* App::getCourse(string courseCode)
+	{
+		for (auto i : AcademicOfficer::getCourses())
+			if (i->get_ccode() == courseCode)
+				return i;
+		return nullptr;
+	}
+
+	Student* App::getStudent(string _rollno)
+	{
+		for (auto i : AcademicOfficer::getStudents())
+			if (i->get_rollno() == _rollno)
+				return i;
+		return nullptr;
+	}
+
 	bool App::isLogged()
 	{
 		return islogged;
@@ -113,12 +137,11 @@ namespace LMS
 	}
 	bool App::addSection(Section* _new)
 	{
-		/*if (islogged && loggedUser->get_role() == "officer")
+		if (islogged && loggedUser->get_role() == "officer")
 		{
 			AcademicOfficer::addSection(_new);
 			return true;
 		}
-		*/
 		return false;
 	}
 	bool App::addCourse(Course* _new)
@@ -130,37 +153,85 @@ namespace LMS
 		}
 		return false;
 	}
-	bool App::addCourseToSection(Course* _course, Section* _section)
+	bool App::linkCourseSection(Course* _course, Section* _section)
 	{
 		if (islogged && loggedUser->get_role() == "officer")
 		{
 			_course->addSection(_section);
-			addSection(new Section(_section->get_name(), _course));
+			_section->updateCourse(_course);
 			return true;
 		}
 		return false;
 	}
-	bool App::addCourseToSection(string courseCode, string sectionName)
+	bool App::linkStudentSection(string _rollno, string sectionName)
+	{
+		if (islogged && (loggedUser->get_role() == "officer" || loggedUser->get_role() == "student"))
+		{
+			Student* _stu = getStudent(_rollno);
+			Section* _sec = getSection(sectionName);
+			if (_stu == nullptr || _sec == nullptr)
+				return false;
+			linkStudentSection(_stu, _sec);
+			return true;
+		}
+		return false;
+	}
+	bool App::linkStudentSection(Student* _student, Section* _section)
+	{
+		if (islogged && (loggedUser->get_role() == "officer" || loggedUser->get_role() == "student"))
+		{
+			Registration* _new = new Registration(_student, _section);
+			_student->addRegistration(_new);
+			_section->addRegistration(_new);
+			return true;
+		}
+		return false;
+	}
+	vector<Registration*> App::getRegistrations()
+	{
+		if (islogged && loggedUser->get_role() == "student")
+		{
+			return ((Student*)loggedUser)->getRegistrations();
+		}
+		return vector<Registration*>();
+	}
+	bool App::addRegistration(string courseCode, string sectionName)
+	{
+		if (islogged && loggedUser->get_role() == "student" /*&& reg open or not*/)
+		{
+			Section* sec = nullptr;
+			for (auto i : AcademicOfficer::getSections())
+				if (i->get_name() == sectionName && i->getCourse()->get_ccode() == courseCode)
+					sec = i;
+			if (sec == nullptr)
+				return false;
+			return linkStudentSection((Student*)loggedUser, sec);
+		}
+		return false;
+	}
+	bool App::dropRegistration(string courseCode, string sectionName)
+	{
+		if (islogged && loggedUser->get_role() == "student" /*&& reg open or not*/)
+		{
+			auto lst = ((Student*)loggedUser)->getRegistrations();
+			int count = 0;
+			for (unsigned int i = 0; i < lst.size();)
+				if (lst[i]->getCourse()->get_ccode() == courseCode &&
+					lst[i]->getSection()->get_name() == sectionName)
+					lst.erase(lst.begin() + i);
+				else ++i;
+		}
+		return false;
+	}
+	bool App::linkCourseSection(string courseCode, string sectionName)
 	{
 		if (islogged && loggedUser->get_role() == "officer")
 		{
-			Course* _course = nullptr;
-			Section* _sec = nullptr;
-			for (auto i : AcademicOfficer::getCourses())
-				if (i->get_ccode() == courseCode)
-				{
-					_course = i;
-					break;
-				};
-			for (auto i : AcademicOfficer::getSections())
-				if (i->get_name() == sectionName)
-				{
-					_sec = i;
-					break;
-				};
+			Course* _course = getCourse(courseCode);
+			Section* _sec = getSection(sectionName);
 			if (_course == nullptr || _sec == nullptr)
 				return false;
-			addCourseToSection(_course, _sec);
+			linkCourseSection(_course, _sec);
 			return true;
 		}
 		return false;

@@ -30,6 +30,15 @@ namespace LMS
 	{
 		return sname;
 	}
+	Course* Section::getCourse()
+	{
+		return scourse;
+	}
+	bool Section::updateCourse(Course* _new)
+	{
+		scourse = _new;
+		return true;
+	}
 	bool Section::addRegistration(Registration *_reg)
 	{
 		sregistrations.push_back(_reg);

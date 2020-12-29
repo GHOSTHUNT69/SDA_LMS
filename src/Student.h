@@ -2,6 +2,7 @@
 #include "Person.h"
 #include "Registration_fwd.h"
 //#include"Registration.h"
+#include"Course_fwd.h"
 #include "Section_fwd.h"
 #include <vector>
 #include <string>
@@ -17,11 +18,6 @@ namespace LMS
 		vector<Registration *> sregistrations; //student registrations
 	public:
 		Student();
-		/*Student(int a)
-			:Person(3)
-		{
-			int j = a;
-		}*/
 		Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password);
 		Student(string rollno_, string name_, string dob_, string email_, string _uname, string _password, vector<Registration *> reg_);
 		~Student();
@@ -31,5 +27,7 @@ namespace LMS
 
 		bool addRegistration(Registration *reg_);
 		bool addRegistration(Section *reg_);
+
+		vector<Registration*> getRegistrations();
 	};
 } // namespace LMS

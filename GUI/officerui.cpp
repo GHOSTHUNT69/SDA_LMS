@@ -239,8 +239,8 @@ void OfficerUI::on_pushButton_23_clicked()
     uint ssize = scode.size() * sec.size();
     if (ssize > 0)
     {
-        if(lmsdata->addCourseToSection(scode, sec))
-            QMessageBox::information(this, "Successfull", "Teacher added");
+        if(lmsdata->linkCourseSection(scode, sec))
+            QMessageBox::information(this, "Successfull", "Course and Section Linked!");
     }
     else
     {

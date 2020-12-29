@@ -1,6 +1,8 @@
 #pragma once
 #include "Registration.h"
 #include "Attendance.h"
+#include "Section.h"
+#include "Course.h"
 
 namespace LMS
 {
@@ -22,6 +24,18 @@ namespace LMS
 
 	Registration::~Registration()
 	{
+	}
+	Course* Registration::getCourse()
+	{
+		return ssection->getCourse();
+	}
+	Section* Registration::getSection()
+	{
+		return ssection;
+	}
+	Student* Registration::getStudent()
+	{
+		return student;
 	}
 	void Registration::markAttendance(int _attend)
 	{

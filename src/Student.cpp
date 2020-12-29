@@ -1,6 +1,7 @@
 #pragma once
 #include "Student.h"
 #include "Registration.h"
+#include "Course.h"
 
 namespace LMS
 {
@@ -38,5 +39,9 @@ namespace LMS
 	{
 		sregistrations.push_back(new Registration(this, sec_));
 		return true;
+	}
+	vector<Registration*> Student::getRegistrations()
+	{
+		return sregistrations;
 	}
 } // namespace LMS

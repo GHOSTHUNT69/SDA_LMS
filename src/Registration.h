@@ -3,6 +3,7 @@
 #include "Section_fwd.h"
 #include "Attendance_fwd.h"
 #include "EvaluationResult_fwd.h"
+#include "Course_fwd.h"
 #include <vector>
 using std::vector;
 
@@ -21,6 +22,9 @@ namespace LMS
 		Registration(Student *_student, Section *_ssection, vector<EvaluationResult *> _seresults, vector<Attendance *> _sattendance);
 		~Registration();
 
+		Course* getCourse();
+		Section* getSection();
+		Student* getStudent();
 		void markAttendance(int _attend);
 		vector<Attendance *> getAttendance();
 	};

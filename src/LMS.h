@@ -5,6 +5,7 @@
 #include "Person_fwd.h"
 #include "Section_fwd.h"
 #include "Course_fwd.h"
+#include "Registration_fwd.h"
 #include <vector>
 #include <string>
 using std::string;
@@ -28,8 +29,9 @@ namespace LMS
 		Faculty *FacultyLogin(string _username, string _password);
 		AcademicOfficer *OfficerLogin(string _username, string _password);
 
-		bool addCourseToSection(Course*, Section*);
-
+		Section* getSection(string sectionName);
+		Course* getCourse(string courseCode);
+		Student* getStudent(string _rollno);
 	public:
 		App();
 		~App();
@@ -40,15 +42,43 @@ namespace LMS
 		bool isLogged();
 		Person *LoggedUser();
 
+		vector<Student*> getStudents();
+		vector<Faculty*> getTeachers();
+		vector<Section*> getSections();
+		vector<Course*> getCourses();
+
+		//Officer Functionaliteies
 		bool addStudent(Student *);
 		bool addTeacher(Faculty *);
 		bool addSection(Section *);
 		bool addCourse(Course *);
+		bool linkCourseSection(string courseCode, string sectionName);
+		bool linkCourseSection(Course*, Section*);
+		bool linkStudentSection(string _rollno, string sectionName);
+		bool linkStudentSection(Student*, Section*);
+		/*Acadamic Oficer :
+		-set deadline for add / drop / withdraw course
+			- can add students / teachers / courses / sections
+			- can link course / section
+			- can link student / registration / course*/
 
-		bool addCourseToSection(string courseCode, string sectionName);
-		vector<Student *> getStudents();
-		vector<Faculty *> getTeachers();
-		vector<Section*> getSections();
-		vector<Course*> getCourses();
+		//Student
+		vector<Registration*> getRegistrations();
+		bool addRegistration(string courseCode, string sectionName);
+		bool dropRegistration(string courseCode, string sectionName);
+		/*	
+			- can view courses and sections
+			- can add / drop / withdraw course during registration period
+			- can view transcript
+		*/
+
+		//Teacher
+		/*
+			- can record attendence
+			- set marks evaluation
+			- can add grade
+		*/
+
+		
 	};
 } // namespace LMS

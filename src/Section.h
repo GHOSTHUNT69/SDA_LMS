@@ -14,17 +14,17 @@ namespace LMS
 	class Section
 	{
 	protected:
-		vector<Registration *> sregistrations;
-		vector<Evaluation *> sevaluations;
-		Session *ssession;
-		Faculty *steacher;
-		Course *scourse;
+		vector<Registration*> sregistrations;
+		vector<Evaluation*> sevaluations;
+		Session* ssession;
+		Faculty* steacher;
+		Course* scourse;
 		string sname;
 		//waiting list
 	public:
 		Section();
-		Section(string _name, Course *_course = nullptr, Faculty *_teacher = nullptr, Session *_session = nullptr);
-		Section(string _name, Course *_course, Faculty *_teacher, Session *_session, vector<Registration *> _regs, vector<Evaluation *> _evals);
+		Section(string _name, Course* _course = nullptr, Faculty* _teacher = nullptr, Session* _session = nullptr);
+		Section(string _name, Course* _course, Faculty* _teacher, Session* _session, vector<Registration*> _regs, vector<Evaluation*> _evals);
 		~Section();
 
 		void markAttendance()
@@ -38,7 +38,10 @@ namespace LMS
 		//bool set_course(Course*);
 
 		string get_name();
+		Course* getCourse();
 
-		bool addRegistration(Registration *);
+		bool updateCourse(Course* _new);
+
+		bool addRegistration(Registration*);
 	};
 } // namespace LMS
