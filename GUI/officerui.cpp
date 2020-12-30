@@ -394,3 +394,40 @@ void OfficerUI::on_pushButton_9_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->ADDTEACHER);
 }
+
+void OfficerUI::on_pushButton_28_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->TEAINSEC);
+    ui->comboBox_5->clear();
+    ui->comboBox_6->clear();
+    for(auto i: lmsdata->getTeachers())
+        ui->comboBox_5->addItem(i->get_name().c_str());
+    for (auto i : lmsdata->getSections())
+    {
+        string sec = i->get_name();
+        string cour;
+        if (i->getCourse() != nullptr)
+            cour = i->getCourse()->get_ccode();
+        else
+            cour = "null";
+        ui->comboBox_6->addItem((sec + "|" + cour).c_str());
+    }
+}
+
+void OfficerUI::on_pushButton_29_clicked()
+{
+    string tea=ui->comboBox_5->currentText().toStdString();
+    QStringList seccour=ui->comboBox_6->currentText().split("|");
+    string sec=seccour.at(0).toStdString();
+    string cour = seccour.at(1).toStdString();
+    uint ssize =tea.size() * sec.size()*cour.size();
+    if (ssize > 0)
+    {
+        if(lmsdata->linkTeacherSection(tea,cour,sec))
+            QMessageBox::information(this, "Successfull", "Teacher and Section Linked!");
+    }
+    else
+    {
+        QMessageBox::information(this, "Invalid Input", "Please check your input details");
+    }
+}

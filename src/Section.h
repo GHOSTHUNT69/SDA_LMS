@@ -44,6 +44,7 @@ namespace LMS
 		int getStudentCount();
 
 		bool updateCourse(Course* _new);
+		bool updateTeacher(Faculty* _new);
 
 		bool addRegistration(Registration*);
 	};

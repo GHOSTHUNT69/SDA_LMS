@@ -117,6 +117,14 @@ namespace LMS
 		return nullptr;
 	}
 
+	Faculty* App::getTeacher(string name)
+	{
+		for (auto i : AcademicOfficer::getTeachers())
+			if (i->get_name() == name)
+				return i;
+		return nullptr;
+	}
+
 	bool App::isLogged()
 	{
 		return islogged;
@@ -178,12 +186,12 @@ namespace LMS
 		}
 		return false;
 	}
-	bool App::linkStudentSection(string _rollno,string courseCode, string sectionName)
+	bool App::linkStudentSection(string _rollno, string courseCode, string sectionName)
 	{
 		if (islogged && (loggedUser->get_role() == "officer" || loggedUser->get_role() == "student"))
 		{
 			Student* _stu = getStudent(_rollno);
-			Section* _sec = getSection(courseCode,sectionName);
+			Section* _sec = getSection(courseCode, sectionName);
 			linkStudentSection(_stu, _sec);
 			return true;
 		}
@@ -200,6 +208,27 @@ namespace LMS
 		}
 		return false;
 	}
+	bool App::linkTeacherSection(Faculty* _teacher, Section* _section)
+	{
+		if (islogged && loggedUser->get_role() == "officer")
+		{
+			_section->updateTeacher(_teacher);
+			return true;
+		}
+		return false;
+	}
+	bool App::linkTeacherSection(string tname, string courseCode, string sectionName)
+	{
+		if (islogged && loggedUser->get_role() == "officer")
+		{
+			Faculty* _tea = getTeacher(tname);
+			Section* _sec = getSection(courseCode, sectionName);
+			if (_tea == nullptr || _sec == nullptr)
+				return false;
+			return linkTeacherSection(_tea, _sec);
+		}
+		return false;
+	}
 	vector<Registration*> App::getRegistrations()
 	{
 		if (islogged && loggedUser->get_role() == "student")
@@ -212,7 +241,7 @@ namespace LMS
 	{
 		if (islogged && loggedUser->get_role() == "student" /*&& reg open or not*/)
 		{
-			Section* sec = getSection(courseCode,sectionName);
+			Section* sec = getSection(courseCode, sectionName);
 			if (sec == nullptr)
 				return false;
 			return linkStudentSection((Student*)loggedUser, sec);

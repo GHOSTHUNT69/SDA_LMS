@@ -33,7 +33,7 @@ namespace LMS
 		Section* getSection(string courseCode, string sectionName);
 		Course* getCourse(string courseCode);
 		Student* getStudent(string _rollno);
-
+		Faculty* getTeacher(string name);
 	public:
 		App();
 		~App();
@@ -59,7 +59,8 @@ namespace LMS
 		bool linkCourseSection(Course*, Section*);
 		bool linkStudentSection(string _rollno,string courseCode, string sectionName);
 		bool linkStudentSection(Student*, Section*);
-		//bool linkTeacherSection()
+		bool linkTeacherSection(Faculty*, Section*);
+		bool linkTeacherSection(string tname, string course, string sectionName);
 		/*Acadamic Oficer :
 		-set deadline for add / drop / withdraw course
 			- can add students / teachers / courses / sections

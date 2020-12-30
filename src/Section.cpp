@@ -47,6 +47,11 @@ namespace LMS
 		scourse = _new;
 		return true;
 	}
+	bool Section::updateTeacher(Faculty* _new)
+	{
+		steacher = _new;
+		return true;
+	}
 	bool Section::addRegistration(Registration *_reg)
 	{
 		sregistrations.push_back(_reg);

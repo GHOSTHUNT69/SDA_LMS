@@ -95,6 +95,10 @@ private slots:
 
     void on_pushButton_9_clicked();
 
+    void on_pushButton_28_clicked();
+
+    void on_pushButton_29_clicked();
+
 private:
     Ui::OfficerUI *ui;
 };
