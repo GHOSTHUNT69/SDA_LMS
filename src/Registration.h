@@ -4,6 +4,7 @@
 #include "Attendance_fwd.h"
 #include "EvaluationResult_fwd.h"
 #include "Course_fwd.h"
+#include "Faculty.h"
 #include <vector>
 using std::vector;
 
@@ -25,6 +26,8 @@ namespace LMS
 		Course* getCourse();
 		Section* getSection();
 		Student* getStudent();
+		Faculty* getTeacher();
+
 		void markAttendance(int _attend);
 		vector<Attendance *> getAttendance();
 	};

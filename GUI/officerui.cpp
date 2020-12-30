@@ -226,6 +226,8 @@ void OfficerUI::on_comboBox_2_activated(const QString &arg1)
 void OfficerUI::on_pushButton_20_clicked()
 {
     ui->stackedWidget->setCurrentWidget(ui->SECTIONINCOURSE);
+    ui->comboBox->clear();
+    ui->comboBox_2->clear();
     for(auto i: lmsdata->getCourses())
         ui->comboBox->addItem(i->get_ccode().c_str());
     for(auto i :lmsdata->getSections())
@@ -266,8 +268,7 @@ void OfficerUI::on_courses_clicked()
 void OfficerUI::on_pushButton_26_clicked()
 {
     string sname=ui->lineEdit_3->text().toStdString();
-    string course=ui->comboBox_3->currentText().toStdString();
-    uint ssize = sname.size() * course.size();
+    uint ssize = sname.size();
     if (ssize > 0)
     {
         if(lmsdata->addSection(new LMS::Section(sname)))
@@ -277,4 +278,119 @@ void OfficerUI::on_pushButton_26_clicked()
     {
         QMessageBox::information(this, "Invalid Input", "Please check your input details");
     }
+}
+
+void OfficerUI::on_pushButton_17_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->VIEWCOURSE);
+    on_viewCourseTable_cellActivated(10,3);
+}
+
+void OfficerUI::on_viewCourseTable_cellActivated(int r, int c)
+{
+    vector<LMS::Course *> course = lmsdata->getCourses();
+    int row =0;
+    ui->viewCourseTable->setRowCount(course.size()+1);
+    ui->viewCourseTable->setColumnCount(3);
+
+    for (auto i : course)
+    {
+        QTableWidgetItem *item;
+        for (int column = 0; column < c; column++)
+        {
+            item = new QTableWidgetItem();
+
+            if (column == 0)
+                item->setText(i->get_cname().c_str());
+            if (column == 1)
+                item->setText(i->get_ccode().c_str());
+            string sec;
+            for(auto j:i->get_csections())
+                sec+=j->get_name()+", ";
+            if(!sec.empty())
+                sec.pop_back();
+            if (column == 2)
+                item->setText(sec.c_str());
+
+            ui->viewCourseTable->setItem(row, column, item);
+        }
+        row++;
+    }
+}
+
+void OfficerUI::on_pushButton_25_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->VIEWSECTION);
+    on_viewSectionTable_cellActivated(10,4);
+}
+
+void OfficerUI::on_viewSectionTable_cellActivated(int r, int c)
+{
+    vector<LMS::Section *> section = lmsdata->getSections();
+    int row = 0;
+    ui->viewSectionTable->setRowCount(section.size()+1);
+    ui->viewSectionTable->setColumnCount(4);
+
+    for (auto i : section)
+    {
+        QTableWidgetItem *item;
+        for (int column = 0; column < c; column++)
+        {
+            item = new QTableWidgetItem();
+
+            if (column == 0)
+                item->setText(i->get_name().c_str());
+            if (column == 1 && i->getCourse())
+                item->setText(i->getCourse()->get_cname().c_str());
+            if (column == 2 && i->getTeacher())
+                item->setText(i->getTeacher()->get_name().c_str());
+            if (column == 3)
+                item->setText(std::to_string(i->getStudentCount()).c_str());
+
+            ui->viewSectionTable->setItem(row, column, item);
+        }
+        row++;
+    }
+}
+
+void OfficerUI::on_register_2_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->REGSTUDENT);
+    ui->comboBox_3->clear();
+    ui->comboBox_4->clear();
+    for(auto i: lmsdata->getStudents())
+        ui->comboBox_3->addItem(i->get_rollno().c_str());
+    for (auto i : lmsdata->getSections())
+    {
+        string sec = i->get_name();
+        string cour;
+        if (i->getCourse() != nullptr)
+            cour = i->getCourse()->get_ccode();
+        else 
+            cour = "null";
+        ui->comboBox_4->addItem((sec + "|" + cour).c_str());
+    }
+}
+
+void OfficerUI::on_pushButton_27_clicked()
+{
+    string rollno=ui->comboBox_3->currentText().toStdString();
+    QStringList seccour=ui->comboBox_4->currentText().split("|");
+    string sec=seccour.at(0).toStdString();
+    string cour = seccour.at(1).toStdString();
+    uint ssize = rollno.size() * sec.size()*cour.size();
+    if (ssize > 0)
+    {
+        if(lmsdata->linkStudentSection(rollno,cour,sec))
+            QMessageBox::information(this, "Successfull", "Student and Section Linked!");
+    }
+    else
+    {
+        QMessageBox::information(this, "Invalid Input", "Please check your input details");
+    }
+}
+
+void OfficerUI::on_pushButton_9_clicked()
+{
+    ui->stackedWidget->setCurrentWidget(ui->ADDTEACHER);
 }

@@ -92,6 +92,15 @@ namespace LMS
 		return nullptr;
 	}
 
+	Section* App::getSection(string courseCode, string sectionName)
+	{
+		if (courseCode == "null") return getSection(sectionName);
+		for (auto i : AcademicOfficer::getSections())
+			if (i->get_name() == sectionName && i->getCourse()->get_ccode() == courseCode)
+				return i;
+		return nullptr;
+	}
+
 	Course* App::getCourse(string courseCode)
 	{
 		for (auto i : AcademicOfficer::getCourses())
@@ -116,6 +125,12 @@ namespace LMS
 	Person* App::LoggedUser()
 	{
 		return loggedUser;
+	}
+	string App::get_role()
+	{
+		if (islogged)
+			return loggedUser->get_role();
+		return "null";
 	}
 	bool App::addStudent(Student* _new)
 	{
@@ -163,14 +178,12 @@ namespace LMS
 		}
 		return false;
 	}
-	bool App::linkStudentSection(string _rollno, string sectionName)
+	bool App::linkStudentSection(string _rollno,string courseCode, string sectionName)
 	{
 		if (islogged && (loggedUser->get_role() == "officer" || loggedUser->get_role() == "student"))
 		{
 			Student* _stu = getStudent(_rollno);
-			Section* _sec = getSection(sectionName);
-			if (_stu == nullptr || _sec == nullptr)
-				return false;
+			Section* _sec = getSection(courseCode,sectionName);
 			linkStudentSection(_stu, _sec);
 			return true;
 		}
@@ -199,10 +212,7 @@ namespace LMS
 	{
 		if (islogged && loggedUser->get_role() == "student" /*&& reg open or not*/)
 		{
-			Section* sec = nullptr;
-			for (auto i : AcademicOfficer::getSections())
-				if (i->get_name() == sectionName && i->getCourse()->get_ccode() == courseCode)
-					sec = i;
+			Section* sec = getSection(courseCode,sectionName);
 			if (sec == nullptr)
 				return false;
 			return linkStudentSection((Student*)loggedUser, sec);

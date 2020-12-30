@@ -39,6 +39,9 @@ namespace LMS
 
 		string get_name();
 		Course* getCourse();
+		Faculty* getTeacher();
+		//vector<Students*> getStudents();
+		int getStudentCount();
 
 		bool updateCourse(Course* _new);
 

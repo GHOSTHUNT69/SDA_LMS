@@ -21,9 +21,21 @@ void GUI::on_pushButton_clicked()
 	string pass = ui.password->text().toStdString();
 	if (lmsdata->Login(uname, pass))
 	{
-		oui = new OfficerUI();
-		//hide();
-		oui->show();
+        if(lmsdata->get_role()=="officer")
+        {
+            oui = new OfficerUI();
+            oui->show();
+        }
+        else if(lmsdata->get_role()=="student")
+        {
+            sui=new StudentUI();
+            sui->show();
+        }
+        else if(lmsdata->get_role()=="teacher")
+        {
+            tui=new TeacherUI();
+            tui->show();
+        }
 	}
 	else
 	{

@@ -30,8 +30,10 @@ namespace LMS
 		AcademicOfficer *OfficerLogin(string _username, string _password);
 
 		Section* getSection(string sectionName);
+		Section* getSection(string courseCode, string sectionName);
 		Course* getCourse(string courseCode);
 		Student* getStudent(string _rollno);
+
 	public:
 		App();
 		~App();
@@ -41,6 +43,7 @@ namespace LMS
 
 		bool isLogged();
 		Person *LoggedUser();
+		string get_role();
 
 		vector<Student*> getStudents();
 		vector<Faculty*> getTeachers();
@@ -54,8 +57,9 @@ namespace LMS
 		bool addCourse(Course *);
 		bool linkCourseSection(string courseCode, string sectionName);
 		bool linkCourseSection(Course*, Section*);
-		bool linkStudentSection(string _rollno, string sectionName);
+		bool linkStudentSection(string _rollno,string courseCode, string sectionName);
 		bool linkStudentSection(Student*, Section*);
+		//bool linkTeacherSection()
 		/*Acadamic Oficer :
 		-set deadline for add / drop / withdraw course
 			- can add students / teachers / courses / sections

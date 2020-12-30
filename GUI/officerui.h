@@ -81,6 +81,20 @@ private slots:
 
     void on_pushButton_26_clicked();
 
+    void on_pushButton_17_clicked();
+
+    void on_viewCourseTable_cellActivated(int row, int column);
+
+    void on_pushButton_25_clicked();
+
+    void on_viewSectionTable_cellActivated(int row, int column);
+
+    void on_register_2_clicked();
+
+    void on_pushButton_27_clicked();
+
+    void on_pushButton_9_clicked();
+
 private:
     Ui::OfficerUI *ui;
 };

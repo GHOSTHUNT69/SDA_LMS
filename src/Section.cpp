@@ -34,6 +34,14 @@ namespace LMS
 	{
 		return scourse;
 	}
+	Faculty* Section::getTeacher()
+	{
+		return steacher;
+	}
+	int Section::getStudentCount()
+	{
+		return sregistrations.size();
+	}
 	bool Section::updateCourse(Course* _new)
 	{
 		scourse = _new;

@@ -120,7 +120,7 @@ QTableWidget, #error_image {
       <string notr="true"/>
      </property>
      <property name="currentIndex">
-      <number>10</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="menu">
       <layout class="QGridLayout" name="gridLayout">
@@ -481,6 +481,51 @@ QTableWidget, #error_image {
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="REGSTUDENT">
+      <layout class="QHBoxLayout" name="horizontalLayout_8">
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QGridLayout" name="gridLayout_13">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_19">
+             <property name="text">
+              <string>Student rollno:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_20">
+             <property name="text">
+              <string>Section | Course:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QComboBox" name="comboBox_3"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QComboBox" name="comboBox_4"/>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_27">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>Register</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="TEACHERS">
       <layout class="QGridLayout" name="gridLayout_6">
        <item row="0" column="1">
@@ -519,6 +564,19 @@ QTableWidget, #error_image {
          </property>
          <property name="text">
           <string>Main Menu</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QPushButton" name="pushButton_28">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Link teacher to Section</string>
          </property>
         </widget>
        </item>
@@ -719,7 +777,7 @@ QTableWidget, #error_image {
          </property>
         </widget>
        </item>
-       <item row="1" column="2">
+       <item row="0" column="2">
         <widget class="QPushButton" name="pushButton_20">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -732,7 +790,7 @@ QTableWidget, #error_image {
          </property>
         </widget>
        </item>
-       <item row="2" column="1">
+       <item row="1" column="0">
         <widget class="QPushButton" name="pushButton_19">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -801,6 +859,29 @@ QTableWidget, #error_image {
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="VIEWCOURSE">
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QTableWidget" name="viewCourseTable">
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Code</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Section</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="SECTIONINCOURSE">
       <layout class="QVBoxLayout" name="verticalLayout_4">
        <item>
@@ -855,32 +936,34 @@ QTableWidget, #error_image {
       </layout>
      </widget>
      <widget class="QWidget" name="SECTIONS">
-      <widget class="QPushButton" name="pushButton_24">
-       <property name="geometry">
-        <rect>
-         <x>90</x>
-         <y>40</y>
-         <width>75</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Add Section</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pushButton_25">
-       <property name="geometry">
-        <rect>
-         <x>200</x>
-         <y>50</y>
-         <width>75</width>
-         <height>23</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>View Sections</string>
-       </property>
-      </widget>
+      <layout class="QHBoxLayout" name="horizontalLayout_6">
+       <item>
+        <widget class="QPushButton" name="pushButton_24">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>Add Section</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_25">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>View Sections</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
      <widget class="QWidget" name="ADDSECTION">
       <widget class="QLabel" name="label_18">
@@ -909,34 +992,6 @@ QTableWidget, #error_image {
         <string/>
        </property>
       </widget>
-      <widget class="QComboBox" name="comboBox_3">
-       <property name="geometry">
-        <rect>
-         <x>100</x>
-         <y>70</y>
-         <width>69</width>
-         <height>22</height>
-        </rect>
-       </property>
-       <item>
-        <property name="text">
-         <string>null</string>
-        </property>
-       </item>
-      </widget>
-      <widget class="QLabel" name="label_19">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>70</y>
-         <width>47</width>
-         <height>13</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>COURSE:</string>
-       </property>
-      </widget>
       <widget class="QPushButton" name="pushButton_26">
        <property name="geometry">
         <rect>
@@ -950,6 +1005,34 @@ QTableWidget, #error_image {
         <string>Add</string>
        </property>
       </widget>
+     </widget>
+     <widget class="QWidget" name="VIEWSECTION">
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="QTableWidget" name="viewSectionTable">
+         <column>
+          <property name="text">
+           <string>Name</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Course</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Teacher</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Student Count</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>

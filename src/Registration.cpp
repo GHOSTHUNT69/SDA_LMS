@@ -37,6 +37,10 @@ namespace LMS
 	{
 		return student;
 	}
+	Faculty* Registration::getTeacher()
+	{
+		return ssection->getTeacher();
+	}
 	void Registration::markAttendance(int _attend)
 	{
 		sattendance.push_back(new Attendance(_attend));
